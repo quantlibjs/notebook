@@ -5,23 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="quantitative finance in javascript">
     <meta name="author" content="Jin Yang">
-    <meta name="keywords" content="quantlib, quantlib.js, ql.mjs, math, mjs, js, javascript, quant, quantitative, finance, quantitative finance, mathematical finance, calculus, linear algebra, statistcs, probability, fast fourier transform, interpolation, extrapolation, ode, cashflow, libor, eurlibor, usdlibor, instrument, capfloor, bond, option, swap, swaption, future, monte carlo, finite difference, lattice, equity, market model, short rate, volatility, stochastic process, term structure">
     <meta name="google-site-verification" content="4IrXoRzLpuCL684J3Y19wWtY9W5KqlvwLH5EQuZh1-Q" />
     <title>quantlib.js - quantitative finance in javascript © 2020 Jin Yang</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/default.min.css">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.52.0/lib/codemirror.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-87290595-6"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-87290595-6');
     </script>
+    <style>
+        .CodeMirror {
+          height: 100px;
+          max-height: 200px;
+        }
+        .row{
+          border-color: #ffffff;
+          border-width: 0.5px;
+          border-style: solid;
+          padding-top: 2px;
+          padding-bottom: 2px;
+          margin-top: 2px;
+          margin-bottom: 2px;
+        }
+        .btn-group-vertical {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+        .floating-action-button {
+          position: absolute;
+          top: 50px;
+          right: 100px;
+        }
+      </style>
   </head>
   <body>
-
+    <div id="notebook" class="container">
+        <div>
+            <h1 class="display-4 text-center">quantlib.js notebook</h1>
+            <p class="lead text-center">quantitative finance in javascript</p>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary floating-action-button" onclick="add('javascript')"><i class="fa fa-plus"></i></button>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/codemirror@5.52.0/lib/codemirror.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/codemirror@5.52.0/mode/javascript/javascript.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/codemirror@5.52.0/mode/markdown/markdown.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/eval5@1.3.0/umd/eval5.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjs@6.6.1/dist/math.min.js"></script>
+    <script>
+        var counter=0,order=0,cells={};function getEditor(e,t){var l=document.getElementById(e);return CodeMirror.fromTextArea(l,{lineWrapping:!0,mode:t})}function toggle(e){"javascript"===cells[e].options.mode?cells[e].setOption("mode","markdown"):cells[e].setOption("mode","javascript"),$(`#cell${e} .fa-code`).length>0?($(`#cell${e} .fa-code`).addClass("fa-sticky-note-o"),$(`#cell${e} .fa-code`).removeClass("fa-code")):($(`#cell${e} .fa-sticky-note-o`).addClass("fa-code"),$(`#cell${e} .fa-sticky-note-o`).removeClass("fa-sticky-note-o"))}function eye(e){$(`#in${e}`).is(":visible")?($(`#in${e}`).hide(),$(`#eye${e} .fa-eye`).addClass("fa-eye-slash"),$(`#eye${e} .fa-eye`).removeClass("fa-eye")):($(`#in${e}`).show(),$(`#eye${e} .fa-eye-slash`).addClass("fa-eye"),$(`#eye${e} .fa-eye-slash`).removeClass("fa-eye-slash"))}function add(e){var t=counter++,l="javascript"===e?"fa fa-code":"fa fa-sticky-note-o";$("#notebook").append(`<div id="cell${t}" class="row">\n<div class="col-1 px-0">\n<div class="btn-group-vertical pull-right" role="group">\n    <button type="button" class="btn btn-light" onclick="toggle(${t})"><i class="${l}"></i></button>\n    <button type="button" class="btn btn-light" onclick="eye(${t});"><i id="eye${t}" class="fa fa-eye"></i></button>\n    <button type="button" class="btn btn-light" onclick="run(${t});"><i class="fa fa-play"></i></button>\n</div>\n</div>\n<div class="col-10">\n<div id="in${t}"><textarea id="edit${t}"></textarea></div>\n<div id="out${t}"></div>\n</div>\n<div class="col-1 px-0">\n<div class="btn-group-vertical" role="group">\n    <button type="button" class="btn btn-light" onclick="$('#cell${t}').insertBefore($('#cell${t}').prev('.row'));"><i class="fa fa-angle-up"></i></button>\n    <button type="button" class="btn btn-light" onclick="del(${t});"><i class="fa fa-trash-o"></i></button>\n    <button type="button" class="btn btn-light" onclick="$('#cell${t}').insertAfter($('#cell${t}').next('.row'));"><i class="fa fa-angle-down"></i></button>\n</div>\n</div>\n</div>`);var n=getEditor(`edit${t}`,e);cells[t]=n,$(`#cell${t}`).hover((function(){$(`#cell${t} .btn-group-vertical`).show(),$(`#cell${t}`).css({"border-color":"#C1E0FF"})}),(function(){$(`#cell${t} .btn-group-vertical`).hide(),$(`#cell${t}`).css({"border-color":"#ffffff"})}))}function del(e){$(`#cell${e}`).remove(),delete cells[e]}function toJSON(){var e=[];for(let l in cells){var t=cells[l].getValue();e.push(t)}return JSON.stringify(e)}function fromJSON(){}function run(e){var t=cells[e].getValue();if("javascript"===cells[e].options.mode)try{var l=interpreter.evaluate(t);$(`#out${e}`).empty(),$(`#out${e}`).append(`<pre>${l}</pre>`)}catch(n){console.log(n),$(`#out${e}`).append(`<pre>${n.message}</pre>`)}else try{l=marked(t);$(`#out${e}`).empty(),$(`#out${e}`).append(`${l}`);var n=document.getElementById(`out${e}`);renderMathInElement(n,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"\\[",right:"\\]",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1}]})}catch(n){console.log(n),$(`#out${e}`).append(`<pre>${n.message}</pre>`)}}var interpreter=new eval5.Interpreter(window);import("https://cdn.jsdelivr.net/npm/@quantlib/ql@latest/ql.mjs").then(e=>{window.ql=e});
+    </script>
   </body>
 </html>
