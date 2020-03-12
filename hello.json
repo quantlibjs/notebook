@@ -24,7 +24,7 @@
 	"cell3": {
 		"input": {
 			"type": "javascript",
-			"source": "var today = ql.DateExt.UTC('7,March,2014');\nql.Settings.evaluationDate.set(today);\ntoday;"
+			"source": "var today = DateExt.UTC('7,March,2014');\nSettings.evaluationDate.set(today);\ntoday;"
 		},
 		"show_editor": true,
 		"output": {
@@ -46,7 +46,7 @@
 	"cell6": {
 		"input": {
 			"type": "javascript",
-			"source": "var option = new ql.EuropeanOption(\n  new ql.PlainVanillaPayoff(ql.Option.Type.Call, 100.0),\n  new ql.EuropeanExercise(ql.DateExt.UTC('7,June,2014'))\n);\noption"
+			"source": "var option = new EuropeanOption(\n  new PlainVanillaPayoff(Option.Type.Call, 100.0),\n  new EuropeanExercise(DateExt.UTC('7,June,2014'))\n);\noption"
 		},
 		"show_editor": true,
 		"output": {
@@ -68,7 +68,7 @@
 	"cell8": {
 		"input": {
 			"type": "javascript",
-			"source": "var u = new ql.SimpleQuote(100.0);\nu;"
+			"source": "var u = new SimpleQuote(100.0);\nu;"
 		},
 		"show_editor": true,
 		"output": {
@@ -79,7 +79,7 @@
 	"cell9": {
 		"input": {
 			"type": "javascript",
-			"source": "var r = new ql.SimpleQuote(0.01);\nr;"
+			"source": "var r = new SimpleQuote(0.01);\nr;"
 		},
 		"show_editor": true,
 		"output": {
@@ -90,7 +90,7 @@
 	"cell10": {
 		"input": {
 			"type": "javascript",
-			"source": "var sigma = new ql.SimpleQuote(0.2);\nsigma;"
+			"source": "var sigma = new SimpleQuote(0.2);\nsigma;"
 		},
 		"show_editor": true,
 		"output": {
@@ -112,7 +112,7 @@
 	"cell12": {
 		"input": {
 			"type": "javascript",
-			"source": "var riskFreeCurve = new ql.FlatForward().ffInit3(0, new ql.TARGET(), new ql.Handle(r), new ql.Actual360());\nriskFreeCurve;"
+			"source": "var riskFreeCurve = new FlatForward().ffInit3(0, new TARGET(), new Handle(r), new Actual360());\nriskFreeCurve;"
 		},
 		"show_editor": true,
 		"output": {
@@ -123,7 +123,7 @@
 	"cell13": {
 		"input": {
 			"type": "javascript",
-			"source": "var volatility = new ql.BlackConstantVol().bcvInit4(0, new ql.TARGET(), new ql.Handle(sigma), new ql.Actual360());\nvolatility;"
+			"source": "var volatility = new BlackConstantVol().bcvInit4(0, new TARGET(), new Handle(sigma), new Actual360());\nvolatility;"
 		},
 		"show_editor": true,
 		"output": {
@@ -134,7 +134,7 @@
 	"cell14": {
 		"input": {
 			"type": "javascript",
-			"source": "var process = new ql.BlackScholesProcess(\n  new ql.Handle(u),\n  new ql.Handle(riskFreeCurve),\n  new ql.Handle(volatility)\n);\nprocess;"
+			"source": "var process = new BlackScholesProcess(\n  new Handle(u),\n  new Handle(riskFreeCurve),\n  new Handle(volatility)\n);\nprocess;"
 		},
 		"show_editor": true,
 		"output": {
@@ -156,7 +156,7 @@
 	"cell16": {
 		"input": {
 			"type": "javascript",
-			"source": "var engine = new ql.AnalyticEuropeanEngine().init1(process);\nengine;"
+			"source": "var engine = new AnalyticEuropeanEngine().init1(process);\nengine;"
 		},
 		"show_editor": true,
 		"output": {
