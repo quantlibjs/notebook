@@ -24,7 +24,7 @@
 	"cell3": {
 		"input": {
 			"type": "javascript",
-			"source": "today = DateExt.UTC('7,March,2014');\nSettings.evaluationDate.set(today);\ntoday;"
+			"source": "today = DateExt.UTC('7,March,2014');\nSettings.evaluationDate.set(today);\ntoday"
 		},
 		"show_editor": true,
 		"output": {
@@ -46,7 +46,7 @@
 	"cell6": {
 		"input": {
 			"type": "javascript",
-			"source": "option = new EuropeanOption(\n  new PlainVanillaPayoff(Option.Type.Call, 100.0),\n  new EuropeanExercise(DateExt.UTC('7,June,2014'))\n);\noption"
+			"source": "option = new EuropeanOption(\n  new PlainVanillaPayoff(Option.Type.Call, 100.0),\n  new EuropeanExercise(DateExt.UTC('7,June,2014'))\n)"
 		},
 		"show_editor": true,
 		"output": {
@@ -68,7 +68,7 @@
 	"cell8": {
 		"input": {
 			"type": "javascript",
-			"source": "u = new SimpleQuote(100.0);\nu;"
+			"source": "u = new SimpleQuote(100.0);"
 		},
 		"show_editor": true,
 		"output": {
@@ -79,7 +79,7 @@
 	"cell9": {
 		"input": {
 			"type": "javascript",
-			"source": "r = new SimpleQuote(0.01);\nr;"
+			"source": "r = new SimpleQuote(0.01);"
 		},
 		"show_editor": true,
 		"output": {
@@ -90,7 +90,7 @@
 	"cell10": {
 		"input": {
 			"type": "javascript",
-			"source": "sigma = new SimpleQuote(0.2);\nsigma;"
+			"source": "sigma = new SimpleQuote(0.2);"
 		},
 		"show_editor": true,
 		"output": {
@@ -112,7 +112,7 @@
 	"cell12": {
 		"input": {
 			"type": "javascript",
-			"source": "riskFreeCurve = new FlatForward().ffInit3(0, new TARGET(), new Handle(r), new Actual360());\nriskFreeCurve;"
+			"source": "riskFreeCurve = new FlatForward().ffInit3(0, new TARGET(), new Handle(r), new Actual360())"
 		},
 		"show_editor": true,
 		"output": {
@@ -123,7 +123,7 @@
 	"cell13": {
 		"input": {
 			"type": "javascript",
-			"source": "volatility = new BlackConstantVol().bcvInit4(0, new TARGET(), new Handle(sigma), new Actual360());\nvolatility;"
+			"source": "volatility = new BlackConstantVol().bcvInit4(0, new TARGET(), new Handle(sigma), new Actual360())"
 		},
 		"show_editor": true,
 		"output": {
@@ -134,7 +134,7 @@
 	"cell14": {
 		"input": {
 			"type": "javascript",
-			"source": "process = new BlackScholesProcess(\n  new Handle(u),\n  new Handle(riskFreeCurve),\n  new Handle(volatility)\n);\nprocess;"
+			"source": "process = new BlackScholesProcess(\n  new Handle(u),\n  new Handle(riskFreeCurve),\n  new Handle(volatility)\n)"
 		},
 		"show_editor": true,
 		"output": {
@@ -156,7 +156,7 @@
 	"cell16": {
 		"input": {
 			"type": "javascript",
-			"source": "engine = new AnalyticEuropeanEngine().init1(process);\nengine;"
+			"source": "engine = new AnalyticEuropeanEngine().init1(process)"
 		},
 		"show_editor": true,
 		"output": {
@@ -178,7 +178,7 @@
 	"cell18": {
 		"input": {
 			"type": "javascript",
-			"source": "npv = option.NPV();\nnpv;"
+			"source": "npv = option.NPV()"
 		},
 		"show_editor": true,
 		"output": {
