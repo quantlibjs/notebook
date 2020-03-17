@@ -13,12 +13,12 @@
 	"cell21": {
 		"input": {
 			"type": "markdown",
-			"source": "##### 使用说明:\n\n通过顶部导航进行以下notebook级操作:\n* 点击 quantlib.js 链接刷新页面，重置notebook\n* 点击 <i class=\"fa fa-plus\"></i> 向选中的Cell下面插入新的Cell\n* 点击 <i class=\"fa fa-angle-double-up\"></i> 运行选中Cell上面所有的Cell\n* 点击 <i class=\"fa fa-angle-double-down\"></i> 运行选中Cell以及下面面所有的Cell\n* 点击 <i class=\"fa fa-fast-forward\"></i> 运行整个notebook\n* 点击 <i class=\"fa fa-refresh\"></i> 清除所有输出\n* 点击 <i class=\"fa fa-adjust\"></i> 切换明暗主题色\n* 点击 <i class=\"fa fa-download\"></i> or <i class=\"fa fa-upload\"></i> 下载/上传 notebook json 文件，可以在navbar输入框改名"
+			"source": "##### 使用说明:\n\n通过顶部导航进行以下notebook级操作:\n* 点击 quantlib.js 链接刷新页面，重置notebook\n* 点击 <i class=\"fa fa-plus\"></i> 向选中的Cell下面插入新的Cell\n* 点击 <i class=\"fa fa-angle-double-up\"></i> 运行选中Cell上面所有的Cell\n* 点击 <i class=\"fa fa-angle-double-down\"></i> 运行选中Cell以及下面面所有的Cell\n* 点击 <i class=\"fa fa-fast-forward\"></i> 运行整个notebook\n* 点击 <i class=\"fa fa-refresh\"></i> 清除所有输出\n* 点击 <i class=\"fa fa-table\"></i> 显示当前变量列表\n* 点击 <i class=\"fa fa-adjust\"></i> 切换明暗主题色\n* 点击 <i class=\"fa fa-download\"></i> or <i class=\"fa fa-upload\"></i> 下载/上传 notebook json 文件，可以在navbar输入框改名"
 		},
 		"show_editor": false,
 		"output": {
 			"type": "html",
-			"content": "<div id=\"ot21\"></div><h5 id=\"使用说明\">使用说明:</h5>\n<p>通过顶部导航进行以下notebook级操作:</p>\n<ul>\n<li>点击 quantlib.js 链接刷新页面，重置notebook</li>\n<li>点击 <i class=\"fa fa-plus\"></i> 向选中的Cell下面插入新的Cell</li>\n<li>点击 <i class=\"fa fa-angle-double-up\"></i> 运行选中Cell上面所有的Cell</li>\n<li>点击 <i class=\"fa fa-angle-double-down\"></i> 运行选中Cell以及下面面所有的Cell</li>\n<li>点击 <i class=\"fa fa-fast-forward\"></i> 运行整个notebook</li>\n<li>点击 <i class=\"fa fa-refresh\"></i> 清除所有输出</li>\n<li>点击 <i class=\"fa fa-adjust\"></i> 切换明暗主题色</li>\n<li>点击 <i class=\"fa fa-download\"></i> or <i class=\"fa fa-upload\"></i> 下载/上传 notebook json 文件，可以在navbar输入框改名</li>\n</ul>\n"
+			"content": "<div id=\"ot21\"></div><h5 id=\"使用说明\">使用说明:</h5>\n<p>通过顶部导航进行以下notebook级操作:</p>\n<ul>\n<li>点击 quantlib.js 链接刷新页面，重置notebook</li>\n<li>点击 <i class=\"fa fa-plus\"></i> 向选中的Cell下面插入新的Cell</li>\n<li>点击 <i class=\"fa fa-angle-double-up\"></i> 运行选中Cell上面所有的Cell</li>\n<li>点击 <i class=\"fa fa-angle-double-down\"></i> 运行选中Cell以及下面面所有的Cell</li>\n<li>点击 <i class=\"fa fa-fast-forward\"></i> 运行整个notebook</li>\n<li>点击 <i class=\"fa fa-refresh\"></i> 清除所有输出</li>\n<li>点击 <i class=\"fa fa-table\"></i> 显示当前变量列表</li>\n<li>点击 <i class=\"fa fa-adjust\"></i> 切换明暗主题色</li>\n<li>点击 <i class=\"fa fa-download\"></i> or <i class=\"fa fa-upload\"></i> 下载/上传 notebook json 文件，可以在navbar输入框改名</li>\n</ul>\n"
 		}
 	},
 	"cell23": {
