@@ -156,12 +156,12 @@
 	"cell14": {
 		"input": {
 			"type": "markdown",
-			"source": "#### More\n\n* [matrices](/notebook/latex/#matrices.json) \n* [arrays](/notebook/latex/#arrays.json) \n* [equation](/notebook/latex/#equation.json) \n* [piecewise](/notebook/latex/#piecewise.json) \n* [cancel](/notebook/latex/#cancel.json) \n* [spacing](/notebook/latex/#spacing.json) \n* [aligned](/notebook/latex/#aligned.json) \n* [color](/notebook/latex/#color.json)"
+			"source": "#### More\n\n* [matrices](/notebook/#latex/matrices.json) \n* [arrays](/notebook/#latex/arrays.json) \n* [equation](/notebook/#latex/equation.json) \n* [piecewise](/notebook/#latex/piecewise.json) \n* [cancel](/notebook/#latex/cancel.json) \n* [spacing](/notebook/#latex/spacing.json) \n* [aligned](/notebook/#latex/aligned.json) \n* [color](/notebook/#latex/color.json)"
 		},
 		"show_editor": false,
 		"output": {
 			"type": "html",
-			"content": "<div id=\"ot14\"><h4 id=\"more\">More</h4>\n<ul>\n<li><a target=\"_blank\" href=\"/notebook/latex/#matrices.json\">matrices</a> </li>\n<li><a target=\"_blank\" href=\"/notebook/latex/#arrays.json\">arrays</a> </li>\n<li><a target=\"_blank\" href=\"/notebook/latex/#equation.json\">equation</a> </li>\n<li><a target=\"_blank\" href=\"/notebook/latex/#piecewise.json\">piecewise</a> </li>\n<li><a target=\"_blank\" href=\"/notebook/latex/#cancel.json\">cancel</a> </li>\n<li><a target=\"_blank\" href=\"/notebook/latex/#spacing.json\">spacing</a> </li>\n<li><a target=\"_blank\" href=\"/notebook/latex/#aligned.json\">aligned</a> </li>\n<li><a target=\"_blank\" href=\"/notebook/latex/#color.json\">color</a></li>\n</ul>\n</div>"
+			"content": "<div id=\"ot14\"><h4 id=\"more\">More</h4>\n<ul>\n<li><a target=\"_blank\" href=\"/notebook/#latex/matrices.json\">matrices</a> </li>\n<li><a target=\"_blank\" href=\"/notebook/#latex/arrays.json\">arrays</a> </li>\n<li><a target=\"_blank\" href=\"/notebook/#latex/equation.json\">equation</a> </li>\n<li><a target=\"_blank\" href=\"/notebook/#latex/piecewise.json\">piecewise</a> </li>\n<li><a target=\"_blank\" href=\"/notebook/#latex/cancel.json\">cancel</a> </li>\n<li><a target=\"_blank\" href=\"/notebook/#latex/spacing.json\">spacing</a> </li>\n<li><a target=\"_blank\" href=\"/notebook/#latex/aligned.json\">aligned</a> </li>\n<li><a target=\"_blank\" href=\"/notebook/#latex/color.json\">color</a></li>\n</ul>\n</div>"
 		}
 	}
 }
