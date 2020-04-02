@@ -21,6 +21,17 @@
 			"content": "<div id=\"ot8\"><p>Suppose an option hedger sells an European option and receives the Black-Scholes value as the options premium.</p>\n<p>Then he follows a Black-Scholes hedging strategy, rehedging at discrete, evenly spaced time intervals as the underlying stock changes. At expiration, the hedger delivers the option payoff to the option holder, and unwinds the hedge. We are interested in understanding the final profit or loss of this strategy.</p>\n</div>"
 		}
 	},
+	"cell16": {
+		"input": {
+			"type": "javascript",
+			"source": "report = [];"
+		},
+		"show_editor": true,
+		"output": {
+			"type": "html",
+			"content": "<div id=\"ot16\"><code></code></div>"
+		}
+	},
 	"cell4": {
 		"input": {
 			"type": "markdown",
@@ -41,17 +52,6 @@
 		"output": {
 			"type": "html",
 			"content": "<div id=\"ot10\"><p>The ReplicationError class carries out Monte Carlo simulations to evaluate the outcome (the replication error) of the discrete hedging strategy over different, randomly generated scenarios of future stock price evolution.</p>\n</div>"
-		}
-	},
-	"cell13": {
-		"input": {
-			"type": "javascript",
-			"source": "report = []; //"
-		},
-		"show_editor": true,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot13\"><code></code></div>"
 		}
 	},
 	"cell0": {
@@ -98,37 +98,15 @@
 			"content": "<div id=\"ot7\"><h2 id=\"compute-replication-error\">Compute Replication Error</h2>\n<p>as in the Derman and Kamal's research note</p>\n</div>"
 		}
 	},
-	"cell14": {
-		"input": {
-			"type": "javascript",
-			"source": "seconds = 0;"
-		},
-		"show_editor": true,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot14\"><code>0</code></div>"
-		}
-	},
 	"cell2": {
 		"input": {
 			"type": "javascript",
-			"source": "try {\n  const startTime: number = Date.now();\n  const maturity: number = 1.0 / 12.0;  // 1 month\n  const strike: number = 100;\n  const underlying: number = 100;\n  const volatility: number = 0.20;  // 20%\n  const riskFreeRate: number = 0.05;      // 5%\n  const rp: ReplicationError = new ReplicationError(\n      Option.Type.Call, maturity, strike, underlying, volatility, riskFreeRate);\n\n  const scenarios: number = 50000;\n  let hedgesNum: number;\n\n  hedgesNum = 21;\n  rp.compute(hedgesNum, scenarios);\n\n  hedgesNum = 84;\n  rp.compute(hedgesNum, scenarios);\n\n  const endTime: number = Date.now();\n\n  seconds = (endTime - startTime) / 1000;\n  \n  table(report)\n\n} catch (e) {\n  print(e);\n}"
+			"source": "try {\n  let seconds = 0;\n  const startTime: number = Date.now();\n  const maturity: number = 1.0 / 12.0;  // 1 month\n  const strike: number = 100;\n  const underlying: number = 100;\n  const volatility: number = 0.20;  // 20%\n  const riskFreeRate: number = 0.05;      // 5%\n  const rp: ReplicationError = new ReplicationError(\n      Option.Type.Call, maturity, strike, underlying, volatility, riskFreeRate);\n\n  const scenarios: number = 50000;\n  let hedgesNum: number;\n\n  hedgesNum = 21;\n  rp.compute(hedgesNum, scenarios);\n\n  hedgesNum = 84;\n  rp.compute(hedgesNum, scenarios);\n\n  const endTime: number = Date.now();\n\n  seconds = (endTime - startTime) / 1000;\n  \n  table(report)\n  \n  print(`Run completed in ${seconds} seconds`)\n\n} catch (e) {\n  print(e);\n}"
 		},
 		"show_editor": true,
 		"output": {
 			"type": "html",
-			"content": "<div id=\"ot2\"><code>Option value: 2.512067086039888<br></code><table class=\"table table-striped\"><thead><tr><th>samples</th><th>trades</th><th>PLMean</th><th>PLStDev</th><th>DermanKamal</th><th>PLSkew</th><th>PLKurt</th></tr></thead><tbody><tr><td>50000</td><td>21</td><td>-0.001</td><td>0.43</td><td>0.44</td><td>-0.30</td><td>1.47</td></tr><tr><td>50000</td><td>84</td><td>0.002</td><td>0.22</td><td>0.22</td><td>-0.17</td><td>1.78</td></tr></tbody></table></div>"
-		}
-	},
-	"cell15": {
-		"input": {
-			"type": "javascript",
-			"source": "print(`Run completed in ${seconds} seconds`)"
-		},
-		"show_editor": true,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot15\"><code>Run completed in 70.923 seconds<br></code></div>"
+			"content": "<div id=\"ot2\"><code>Option value: 2.512067086039888<br></code><table class=\"table table-striped\"><thead><tr><th>samples</th><th>trades</th><th>PLMean</th><th>PLStDev</th><th>DermanKamal</th><th>PLSkew</th><th>PLKurt</th></tr></thead><tbody><tr><td>50000</td><td>21</td><td>-0.000</td><td>0.43</td><td>0.44</td><td>-0.30</td><td>1.42</td></tr><tr><td>50000</td><td>84</td><td>-0.001</td><td>0.22</td><td>0.22</td><td>-0.18</td><td>1.66</td></tr></tbody></table><code>Run completed in 50.938 seconds<br></code></div>"
 		}
 	}
 }
