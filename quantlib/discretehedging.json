@@ -1,0 +1,134 @@
+{
+	"cell3": {
+		"input": {
+			"type": "markdown",
+			"source": "# Discrete Hedging\n\nThis is an example on using QuantLib Montecarlo framework.\n\nIt computes profit and loss of a discrete interval hedging strategy and compares with the results of Derman & Kamal's (Goldman Sachs Equity Derivatives Research)\n\nResearch Note: \"When You Cannot Hedge Continuously: The Corrections to Black-Scholes\"\n\nhttp://www.ederman.com/emanuelderman/GSQSpapers/when_you_cannot_hedge.pdf"
+		},
+		"show_editor": false,
+		"output": {
+			"type": "html",
+			"content": "<div id=\"ot3\"><h1 id=\"discrete-hedging\">Discrete Hedging</h1>\n<p>This is an example on using QuantLib Montecarlo framework.</p>\n<p>It computes profit and loss of a discrete interval hedging strategy and compares with the results of Derman &amp; Kamal's (Goldman Sachs Equity Derivatives Research)</p>\n<p>Research Note: \"When You Cannot Hedge Continuously: The Corrections to Black-Scholes\"</p>\n<p><a target=\"_blank\" href=\"http://www.ederman.com/emanuelderman/GSQSpapers/when_you_cannot_hedge.pdf\">http://www.ederman.com/emanuelderman/GSQSpapers/when_you_cannot_hedge.pdf</a></p>\n</div>"
+		}
+	},
+	"cell8": {
+		"input": {
+			"type": "markdown",
+			"source": "Suppose an option hedger sells an European option and receives the Black-Scholes value as the options premium.\n\nThen he follows a Black-Scholes hedging strategy, rehedging at discrete, evenly spaced time intervals as the underlying stock changes. At expiration, the hedger delivers the option payoff to the option holder, and unwinds the hedge. We are interested in understanding the final profit or loss of this strategy."
+		},
+		"show_editor": false,
+		"output": {
+			"type": "html",
+			"content": "<div id=\"ot8\"><p>Suppose an option hedger sells an European option and receives the Black-Scholes value as the options premium.</p>\n<p>Then he follows a Black-Scholes hedging strategy, rehedging at discrete, evenly spaced time intervals as the underlying stock changes. At expiration, the hedger delivers the option payoff to the option holder, and unwinds the hedge. We are interested in understanding the final profit or loss of this strategy.</p>\n</div>"
+		}
+	},
+	"cell4": {
+		"input": {
+			"type": "markdown",
+			"source": "## ReplicationError Class\n\nIf the hedger had followed the exact Black-Scholes replication strategy, re-hedging continuously as the underlying stock evolved towards its final value at expiration, then, no matter what path the stock took, the final P&L would be exactly zero. When the replication strategy deviates from the exact Black-Scholes method, the final P&L may deviate from zero. This deviation is called the replication error. When the hedger rebalances at discrete rather than continuous intervals, the hedge is imperfect and the replication is inexact. The more often hedging occurs, the smaller the replication error."
+		},
+		"show_editor": false,
+		"output": {
+			"type": "html",
+			"content": "<div id=\"ot4\"><h2 id=\"replicationerror-class\">ReplicationError Class</h2>\n<p>If the hedger had followed the exact Black-Scholes replication strategy, re-hedging continuously as the underlying stock evolved towards its final value at expiration, then, no matter what path the stock took, the final P&amp;L would be exactly zero. When the replication strategy deviates from the exact Black-Scholes method, the final P&amp;L may deviate from zero. This deviation is called the replication error. When the hedger rebalances at discrete rather than continuous intervals, the hedge is imperfect and the replication is inexact. The more often hedging occurs, the smaller the replication error.</p>\n</div>"
+		}
+	},
+	"cell10": {
+		"input": {
+			"type": "markdown",
+			"source": "The ReplicationError class carries out Monte Carlo simulations to evaluate the outcome (the replication error) of the discrete hedging strategy over different, randomly generated scenarios of future stock price evolution."
+		},
+		"show_editor": false,
+		"output": {
+			"type": "html",
+			"content": "<div id=\"ot10\"><p>The ReplicationError class carries out Monte Carlo simulations to evaluate the outcome (the replication error) of the discrete hedging strategy over different, randomly generated scenarios of future stock price evolution.</p>\n</div>"
+		}
+	},
+	"cell13": {
+		"input": {
+			"type": "javascript",
+			"source": "report = []; //"
+		},
+		"show_editor": true,
+		"output": {
+			"type": "html",
+			"content": "<div id=\"ot13\"><code></code></div>"
+		}
+	},
+	"cell0": {
+		"input": {
+			"type": "javascript",
+			"source": "class ReplicationError {\n  constructor(\n      type: Option.Type, maturity: number, strike: number, s0: number,\n      sigma: number, r: number) {\n    this._maturity = maturity;\n    this._payoff = new PlainVanillaPayoff(type, strike);\n    this._s0 = s0;\n    this._sigma = sigma;\n    this._r = r;\n\n    // value of the option\n    const rDiscount: DiscountFactor = Math.exp(-this._r * this._maturity);\n    const qDiscount: DiscountFactor = 1.0;\n    const forward: number = this._s0 * qDiscount / rDiscount;\n    const stdDev: number = Math.sqrt(this._sigma * this._sigma * this._maturity);\n    const payoff: StrikedTypePayoff = new PlainVanillaPayoff(type, strike);\n    const black: BlackCalculator =\n        new BlackCalculator().init1(payoff, forward, stdDev, rDiscount);\n\n    print(`Option value: ${black.value()}`);\n\n    // store option's vega, since Derman and Kamal's formula needs it\n    this._vega = black.vega(this._maturity);\n  }\n\n  // the actual replication error computation\n  compute(nTimeSteps: number, nSamples: number): void {\n    if (nTimeSteps <= 0) {\n      throw new Error('the number of steps must be > 0');\n    }\n\n    // hedging interval\n    // Time tau = maturity_ / nTimeSteps;\n\n    /* Black-Scholes framework: the underlying stock price evolves\n       lognormally with a fixed known volatility that stays constant\n       throughout time.\n    */\n    const calendar: Calendar = new TARGET();\n    const today: Date = DateExt.UTC();\n    const dayCount: DayCounter = new Actual365Fixed();\n    const stateVariable: Handle<Quote> = new Handle(new SimpleQuote(this._s0));\n    const riskFreeRate: Handle<FlatForward> =\n        new Handle(new FlatForward().ffInit2(today, this._r, dayCount));\n    const dividendYield: Handle<FlatForward> =\n        new Handle(new FlatForward().ffInit2(today, 0.0, dayCount));\n    const volatility: Handle<BlackVolTermStructure> =\n        new Handle(new BlackConstantVol().bcvInit1(\n            today, calendar, this._sigma, dayCount));\n    const diffusion: StochasticProcess1D = new BlackScholesMertonProcess(\n        stateVariable, dividendYield, riskFreeRate, volatility);\n\n    // Black Scholes equation rules the path generator:\n    // at each step the log of the stock\n    // will have drift and sigma^2 variance\n    const rsg: InverseCumulativeRsg =\n        new PseudoRandom().make_sequence_generator(nTimeSteps, 0);\n\n    const brownianBridge = false;\n\n    const myPathGenerator: PathGenerator = new PathGenerator().init1(\n        diffusion, this._maturity, nTimeSteps, rsg, brownianBridge);\n\n    // The replication strategy's Profit&Loss is computed for each path\n    // of the stock. The path pricer knows how to price a path using its\n    // value() method\n    const myPathPricer: PathPricer<Path> = new ReplicationPathPricer(\n        this._payoff.optionType(), this._payoff.strike(), this._r,\n        this._maturity, this._sigma);\n\n    // a statistics accumulator for the path-dependant Profit&Loss values\n    const statisticsAccumulator: RiskStatistics = new RiskStatistics();\n\n    // The Monte Carlo model generates paths using myPathGenerator\n    // each path is priced using myPathPricer\n    // prices will be accumulated into statisticsAccumulator\n    // tslint:disable-next-line:variable-name\n    const MCSimulation: MonteCarloModel =\n        new MonteCarloModel(MC.SingleVariate, new PseudoRandom())\n            .mcmInit(\n                myPathGenerator, myPathPricer, statisticsAccumulator, false);\n\n    // the model simulates nSamples paths\n    MCSimulation.addSamples(nSamples);\n\n    // the sampleAccumulator method\n    // gives access to all the methods of statisticsAccumulator\n    // tslint:disable-next-line:variable-name\n    const PLMean: number = MCSimulation.sampleAccumulator().mean();\n    // tslint:disable-next-line:variable-name\n    const PLStDev: number = MCSimulation.sampleAccumulator().standardDeviation();\n    // tslint:disable-next-line:variable-name\n    const PLSkew: number = MCSimulation.sampleAccumulator().skewness();\n    // tslint:disable-next-line:variable-name\n    const PLKurt: number = MCSimulation.sampleAccumulator().kurtosis();\n\n    // Derman and Kamal's formula\n    const theorStD: number =\n        Math.sqrt(M_PI / 4 / nTimeSteps) * this._vega * this._sigma;\n\n    report.push({\n      samples: nSamples,\n      trades: nTimeSteps,\n      PLMean: PLMean.toFixed(3),\n      PLStDev: PLStDev.toFixed(2),\n      DermanKamal: theorStD.toFixed(2),\n      PLSkew: PLSkew.toFixed(2),\n      PLKurt: PLKurt.toFixed(2)\n    })\n  }\n\n  private _maturity: number;\n  _payoff: PlainVanillaPayoff;\n  private _s0: number;\n  private _sigma: number;\n  private _r: number;\n  private _vega: number;\n}"
+		},
+		"show_editor": true,
+		"output": {
+			"type": "html",
+			"content": "<div id=\"ot0\"><code>undefined</code></div>"
+		}
+	},
+	"cell6": {
+		"input": {
+			"type": "markdown",
+			"source": "## ReplicationPathPricer Class\n\nThe key for the `MonteCarlo` simulation is to have a `PathPricer` that implements a `f(path: Path)` method. This method prices the portfolio for each Path of the random variable"
+		},
+		"show_editor": false,
+		"output": {
+			"type": "html",
+			"content": "<div id=\"ot6\"><h2 id=\"replicationpathpricer-class\">ReplicationPathPricer Class</h2>\n<p>The key for the <code>MonteCarlo</code> simulation is to have a <code>PathPricer</code> that implements a <code>f(path: Path)</code> method. This method prices the portfolio for each Path of the random variable</p>\n</div>"
+		}
+	},
+	"cell1": {
+		"input": {
+			"type": "javascript",
+			"source": "class ReplicationPathPricer extends PathPricer<Path> {\n  constructor(\n      type: Option.Type, strike: number, r: number, maturity: number,\n      sigma: number) {\n    super();\n    this._type = type;\n    this._strike = strike;\n    this._r = r;\n    this._maturity = maturity;\n    this._sigma = sigma;\n\n    if (this._strike <= 0) {\n      throw new Error('strike must be positive');\n    }\n    if (this._r < 0) {\n      throw new Error('risk free rate (r) must be positive or zero');\n    }\n    if (this._maturity <= 0) {\n      throw new Error('maturity must be positive');\n    }\n    if (this._sigma < 0) {\n      throw new Error('volatility (sigma) must be positive or zero');\n    }\n  }\n\n  /**\n   * The actual computation of the Profit&Loss for each single path.\n   *\n   * In each scenario N rehedging trades spaced evenly in time over\n   * the life of the option are carried out, using the Black-Scholes\n   * hedge ratio.\n   */\n  f(path: Path): number {\n    const n: number = path.length() - 1;\n    if (n <= 0) {\n      throw new Error('the path cannot be empty');\n    }\n\n    // discrete hedging interval\n    const dt: number = this._maturity / n;\n\n    // For simplicity, we assume the stock pays no dividends.\n    const stockDividendYield: Rate = 0.0;\n\n    // let's start\n    let t: number = 0;\n\n    // stock value at t=0\n    let stock: number = path.front;\n\n    // money account at t=0\n    // tslint:disable-next-line:variable-name\n    let money_account: number = 0.0;\n\n    /************************/\n    /*** the initial deal ***/\n    /************************/\n    // option fair price (Black-Scholes) at t=0\n    let rDiscount: DiscountFactor = Math.exp(-this._r * this._maturity);\n    let qDiscount: DiscountFactor =\n        Math.exp(-stockDividendYield * this._maturity);\n    let forward: number = stock * qDiscount / rDiscount;\n    let stdDev: number = Math.sqrt(this._sigma * this._sigma * this._maturity);\n    const payoff: StrikedTypePayoff =\n        new PlainVanillaPayoff(this._type, this._strike);\n    const black: BlackCalculator =\n        new BlackCalculator().init1(payoff, forward, stdDev, rDiscount);\n    // sell the option, cash in its premium\n    money_account += black.value();\n    // compute delta\n    let delta: number = black.delta(stock);\n    // delta-hedge the option buying stock\n    let stockAmount: number = delta;\n    money_account -= stockAmount * stock;\n\n    /**********************************/\n    /*** hedging during option life ***/\n    /**********************************/\n    for (let step = 0; step < n - 1; step++) {\n      // time flows\n      t += dt;\n\n      // accruing on the money account\n      money_account *= Math.exp(this._r * dt);\n\n      // stock growth:\n      stock = path.at(step + 1);\n\n      // recalculate option value at the current stock value,\n      // and the current time to maturity\n      rDiscount = Math.exp(-this._r * (this._maturity - t));\n      qDiscount = Math.exp(-stockDividendYield * (this._maturity - t));\n      forward = stock * qDiscount / rDiscount;\n      stdDev = Math.sqrt(this._sigma * this._sigma * (this._maturity - t));\n      const black: BlackCalculator =\n          new BlackCalculator().init1(payoff, forward, stdDev, rDiscount);\n\n      // recalculate delta\n      delta = black.delta(stock);\n\n      // re-hedging\n      money_account -= (delta - stockAmount) * stock;\n      stockAmount = delta;\n    }\n\n    /*************************/\n    /*** option expiration ***/\n    /*************************/\n    // last accrual on my money account\n    money_account *= Math.exp(this._r * dt);\n    // last stock growth\n    stock = path.at(n);\n\n    // the hedger delivers the option payoff to the option holder\n    const optionPayoff: number =\n        new PlainVanillaPayoff(this._type, this._strike).f(stock);\n    money_account -= optionPayoff;\n\n    // and unwinds the hedge selling his stock position\n    money_account += stockAmount * stock;\n\n    // final Profit&Loss\n    return money_account;\n  }\n\n  private _type: Option.Type;\n  private _strike: number;\n  private _r: number;\n  private _maturity: number;\n  private _sigma: number;\n}"
+		},
+		"show_editor": true,
+		"output": {
+			"type": "html",
+			"content": "<div id=\"ot1\"><code>undefined</code></div>"
+		}
+	},
+	"cell7": {
+		"input": {
+			"type": "markdown",
+			"source": "## Compute Replication Error\nas in the Derman and Kamal's research note"
+		},
+		"show_editor": false,
+		"output": {
+			"type": "html",
+			"content": "<div id=\"ot7\"><h2 id=\"compute-replication-error\">Compute Replication Error</h2>\n<p>as in the Derman and Kamal's research note</p>\n</div>"
+		}
+	},
+	"cell14": {
+		"input": {
+			"type": "javascript",
+			"source": "seconds = 0;"
+		},
+		"show_editor": true,
+		"output": {
+			"type": "html",
+			"content": "<div id=\"ot14\"><code>0</code></div>"
+		}
+	},
+	"cell2": {
+		"input": {
+			"type": "javascript",
+			"source": "try {\n  const startTime: number = Date.now();\n  const maturity: number = 1.0 / 12.0;  // 1 month\n  const strike: number = 100;\n  const underlying: number = 100;\n  const volatility: number = 0.20;  // 20%\n  const riskFreeRate: number = 0.05;      // 5%\n  const rp: ReplicationError = new ReplicationError(\n      Option.Type.Call, maturity, strike, underlying, volatility, riskFreeRate);\n\n  const scenarios: number = 50000;\n  let hedgesNum: number;\n\n  hedgesNum = 21;\n  rp.compute(hedgesNum, scenarios);\n\n  hedgesNum = 84;\n  rp.compute(hedgesNum, scenarios);\n\n  const endTime: number = Date.now();\n\n  seconds = (endTime - startTime) / 1000;\n  \n  table(report)\n\n} catch (e) {\n  print(e);\n}"
+		},
+		"show_editor": true,
+		"output": {
+			"type": "html",
+			"content": "<div id=\"ot2\"><code>Option value: 2.512067086039888<br></code><table class=\"table table-striped\"><thead><tr><th>samples</th><th>trades</th><th>PLMean</th><th>PLStDev</th><th>DermanKamal</th><th>PLSkew</th><th>PLKurt</th></tr></thead><tbody><tr><td>50000</td><td>21</td><td>-0.001</td><td>0.43</td><td>0.44</td><td>-0.30</td><td>1.47</td></tr><tr><td>50000</td><td>84</td><td>0.002</td><td>0.22</td><td>0.22</td><td>-0.17</td><td>1.78</td></tr></tbody></table></div>"
+		}
+	},
+	"cell15": {
+		"input": {
+			"type": "javascript",
+			"source": "print(`Run completed in ${seconds} seconds`)"
+		},
+		"show_editor": true,
+		"output": {
+			"type": "html",
+			"content": "<div id=\"ot15\"><code>Run completed in 70.923 seconds<br></code></div>"
+		}
+	}
+}
