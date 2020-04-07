@@ -13,45 +13,56 @@
 	"cell21": {
 		"input": {
 			"type": "markdown",
-			"source": "##### 使用说明:\n\n通过顶部导航进行以下notebook级操作:\n* 点击 quantlib.js 链接刷新页面，重置notebook\n* 点击 <i class=\"fa fa-plus\"></i> 向选中的Cell下面插入新的Cell\n* 点击 <i class=\"fa fa-angle-double-up\"></i> 运行选中Cell上面所有的Cell\n* 点击 <i class=\"fa fa-angle-double-down\"></i> 运行选中Cell以及下面面所有的Cell\n* 点击 <i class=\"fa fa-fast-forward\"></i> 运行整个notebook\n* 点击 <i class=\"fa fa-close\"></i> 清除所有输出\n* 点击 <i class=\"fa fa-adjust\"></i> 切换明暗主题色\n* 点击 <i class=\"fa fa-download\"></i> or <i class=\"fa fa-upload\"></i> 下载/上传 notebook json 文件，可以在navbar输入框改名"
+			"source": "##### 使用说明:\n\n通过顶部导航进行以下notebook级操作:\n* 点击 quantlib.js 链接刷新页面，重置notebook\n* 点击 <i class=\"fa fa-plus\"></i> 向选中的Cell下面插入新的Cell\n* 点击 <i class=\"fa fa-angle-double-up\"></i> 运行选中Cell上面所有的Cell\n* 点击 <i class=\"fa fa-angle-double-down\"></i> 运行选中Cell以及下面面所有的Cell\n* 点击 <i class=\"fa fa-forward\"></i> 运行整个notebook\n* 点击 <i class=\"fa fa-close\"></i> 清除所有输出"
 		},
 		"show_editor": false,
 		"output": {
 			"type": "html",
-			"content": "<div id=\"ot21\"><h5 id=\"使用说明\">使用说明:</h5>\n<p>通过顶部导航进行以下notebook级操作:</p>\n<ul>\n<li>点击 quantlib.js 链接刷新页面，重置notebook</li>\n<li>点击 <i class=\"fa fa-plus\"></i> 向选中的Cell下面插入新的Cell</li>\n<li>点击 <i class=\"fa fa-angle-double-up\"></i> 运行选中Cell上面所有的Cell</li>\n<li>点击 <i class=\"fa fa-angle-double-down\"></i> 运行选中Cell以及下面面所有的Cell</li>\n<li>点击 <i class=\"fa fa-fast-forward\"></i> 运行整个notebook</li>\n<li>点击 <i class=\"fa fa-close\"></i> 清除所有输出</li>\n<li>点击 <i class=\"fa fa-adjust\"></i> 切换明暗主题色</li>\n<li>点击 <i class=\"fa fa-download\"></i> or <i class=\"fa fa-upload\"></i> 下载/上传 notebook json 文件，可以在navbar输入框改名</li>\n</ul>\n</div>"
-		}
-	},
-	"cell23": {
-		"input": {
-			"type": "markdown",
-			"source": "##### 一次性URL加载\n\n* 可以用 `https://quantlib.js.org/notebook/#https://mydomain.com/link-to-notebook.json` 这样的链接从url加载notebook"
-		},
-		"show_editor": false,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot23\"><h5 id=\"一次性url加载\">一次性URL加载</h5>\n<ul>\n<li>可以用 <code>https://quantlib.js.org/notebook/#https://mydomain.com/link-to-notebook.json</code> 这样的链接从url加载notebook</li>\n</ul>\n</div>"
+			"content": "<div id=\"ot21\"><h5 id=\"使用说明\">使用说明:</h5>\n<p>通过顶部导航进行以下notebook级操作:</p>\n<ul>\n<li>点击 quantlib.js 链接刷新页面，重置notebook</li>\n<li>点击 <i class=\"fa fa-plus\"></i> 向选中的Cell下面插入新的Cell</li>\n<li>点击 <i class=\"fa fa-angle-double-up\"></i> 运行选中Cell上面所有的Cell</li>\n<li>点击 <i class=\"fa fa-angle-double-down\"></i> 运行选中Cell以及下面面所有的Cell</li>\n<li>点击 <i class=\"fa fa-forward\"></i> 运行整个notebook</li>\n<li>点击 <i class=\"fa fa-close\"></i> 清除所有输出</li>\n</ul>\n</div>"
 		}
 	},
 	"cell22": {
 		"input": {
 			"type": "markdown",
-			"source": "Cell级操作(鼠标选中时):\n\n* 点击 </> or <i class=\"fa fa-sticky-note-o\"></i> 切换Cell类型, 可以是 `code` 或 `markdown`\n* 点击 <i class=\"fa fa-navicon\"></i> or <i class=\"fa fa-ellipsis-v\"></i> 显示/隐藏 编辑器\n* 点击 <i class=\"fa fa-play\"></i> 执行当前Cell\n* 点击 <i class=\"fa fa-angle-up\"></i> 向上移动当前Cell\n* 点击 <i class=\"fa fa-trash-o\"></i> 删除当前cell\n* 点击 <i class=\"fa fa-angle-down\"></i> 向下移动当前Cell"
+			"source": "##### Cell级操作(鼠标选中时):\n\n* 点击 </> or <i class=\"fa fa-sticky-note-o\"></i> 切换Cell类型, 可以是 `code` 或 `markdown`\n* 点击 <i class=\"fa fa-navicon\"></i> or <i class=\"fa fa-ellipsis-v\"></i> 显示/隐藏 编辑器\n* 点击 <i class=\"fa fa-play\"></i> 执行当前Cell\n* 点击 <i class=\"fa fa-angle-up\"></i> 向上移动当前Cell\n* 点击 <i class=\"fa fa-trash-o\"></i> 删除当前cell\n* 点击 <i class=\"fa fa-angle-down\"></i> 向下移动当前Cell"
 		},
 		"show_editor": false,
 		"output": {
 			"type": "html",
-			"content": "<div id=\"ot22\"><p>Cell级操作(鼠标选中时):</p>\n<ul>\n<li>点击 &lt;/&gt; or <i class=\"fa fa-sticky-note-o\"></i> 切换Cell类型, 可以是 <code>code</code> 或 <code>markdown</code></li>\n<li>点击 <i class=\"fa fa-navicon\"></i> or <i class=\"fa fa-ellipsis-v\"></i> 显示/隐藏 编辑器</li>\n<li>点击 <i class=\"fa fa-play\"></i> 执行当前Cell</li>\n<li>点击 <i class=\"fa fa-angle-up\"></i> 向上移动当前Cell</li>\n<li>点击 <i class=\"fa fa-trash-o\"></i> 删除当前cell</li>\n<li>点击 <i class=\"fa fa-angle-down\"></i> 向下移动当前Cell</li>\n</ul>\n</div>"
+			"content": "<div id=\"ot22\"><h5 id=\"cell级操作鼠标选中时\">Cell级操作(鼠标选中时):</h5>\n<ul>\n<li>点击 &lt;/&gt; or <i class=\"fa fa-sticky-note-o\"></i> 切换Cell类型, 可以是 <code>code</code> 或 <code>markdown</code></li>\n<li>点击 <i class=\"fa fa-navicon\"></i> or <i class=\"fa fa-ellipsis-v\"></i> 显示/隐藏 编辑器</li>\n<li>点击 <i class=\"fa fa-play\"></i> 执行当前Cell</li>\n<li>点击 <i class=\"fa fa-angle-up\"></i> 向上移动当前Cell</li>\n<li>点击 <i class=\"fa fa-trash-o\"></i> 删除当前cell</li>\n<li>点击 <i class=\"fa fa-angle-down\"></i> 向下移动当前Cell</li>\n</ul>\n</div>"
+		}
+	},
+	"cell27": {
+		"input": {
+			"type": "markdown",
+			"source": "##### 设置\n\n* 点击 <i class=\"fa fa-adjust\"></i> 切换明暗主题色\n* 点击 <i class=\"fa fa-toggle-on\"></i> 或 <i class=\"fa fa-toggle-off\"></i>切换引擎, 默认是`eval5`. 请参照 `代码执行`部分\n\n文件:\n* 点击 <i class=\"fa fa-download\"></i>从当前notebook生产json文件，下载到本地磁盘\n* 点击 <i class=\"fa fa-upload\"></i> 从本地磁盘，上传notebook json文件到浏览器\n* 用文件名输入框更改文件名"
+		},
+		"show_editor": false,
+		"output": {
+			"type": "html",
+			"content": "<div id=\"ot27\"><h5 id=\"设置\">设置</h5>\n<ul>\n<li>点击 <i class=\"fa fa-adjust\"></i> 切换明暗主题色</li>\n<li>点击 <i class=\"fa fa-toggle-on\"></i> 或 <i class=\"fa fa-toggle-off\"></i>切换引擎, 默认是<code>eval5</code>. 请参照 <code>代码执行</code>部分</li>\n</ul>\n<p>文件:</p>\n<ul>\n<li>点击 <i class=\"fa fa-download\"></i>从当前notebook生产json文件，下载到本地磁盘</li>\n<li>点击 <i class=\"fa fa-upload\"></i> 从本地磁盘，上传notebook json文件到浏览器</li>\n<li>用文件名输入框更改文件名</li>\n</ul>\n</div>"
+		}
+	},
+	"cell23": {
+		"input": {
+			"type": "markdown",
+			"source": "##### 一次性URL加载\n\n* 可以用 `https://quantlib.js.org/notebook/#https://mydomain.com/link-to-notebook.json` 这样的链接从url加载notebook，文件名会显示在输入框"
+		},
+		"show_editor": false,
+		"output": {
+			"type": "html",
+			"content": "<div id=\"ot23\"><h5 id=\"一次性url加载\">一次性URL加载</h5>\n<ul>\n<li>可以用 <code>https://quantlib.js.org/notebook/#https://mydomain.com/link-to-notebook.json</code> 这样的链接从url加载notebook，文件名会显示在输入框</li>\n</ul>\n</div>"
 		}
 	},
 	"cell24": {
 		"input": {
 			"type": "markdown",
-			"source": "##### Markdown 和 LaTex\n\n我们使用：\n\n* [marked](https://github.com/markedjs/marked) 渲染 [GitHub Flavored Markdown](https://github.github.com/gfm/)\n\n* [katex](https://katex.org/) 渲染 `LaTex`, 例如： $ c = \\pm\\sqrt{a^2 + b^2} $ (把 latex放在 `$$ ... $$ `中时，用diaplay模式渲染, 放在`$ ... $`中时，用inline模式渲染)\n\nMarkdown介绍点[这里](/notebook/#markdown/tutorial.json)\n\nLatex介绍点[这里](/notebook/#latex/tutorial.json)"
+			"source": "##### Markdown 和 LaTex\n\n我们使用：\n\n* [marked](https://github.com/markedjs/marked) 渲染 [GitHub Flavored Markdown](https://github.github.com/gfm/)\n\n* [katex](https://katex.org/) 渲染 `LaTex`, 例如： $ c = \\pm\\sqrt{a^2 + b^2} $ (把 latex放在 `$$ ... $$ `中时，用diaplay模式渲染, 放在`$ ... $`中时，用inline模式渲染)； [Supported Functions](https://katex.org/docs/supported.html), [Support Table](https://katex.org/docs/support_table.html)\n\nMarkdown介绍点[这里](/notebook/#markdown/tutorial.json)\n\nLatex介绍点[这里](/notebook/#latex/tutorial.json)"
 		},
 		"show_editor": false,
 		"output": {
 			"type": "html",
-			"content": "<div id=\"ot24\"><h5 id=\"markdown-和-latex\">Markdown 和 LaTex</h5>\n<p>我们使用：</p>\n<ul>\n<li><p><a target=\"_blank\" href=\"https://github.com/markedjs/marked\">marked</a> 渲染 <a target=\"_blank\" href=\"https://github.github.com/gfm/\">GitHub Flavored Markdown</a></p>\n</li>\n<li><p><a target=\"_blank\" href=\"https://katex.org/\">katex</a> 渲染 <code>LaTex</code>, 例如： <span><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>c</mi><mo>=</mo><mo>±</mo><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding=\"application/x-tex\"> c = \\pm\\sqrt{a^2 + b^2} </annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height: 0.43056em; vertical-align: 0em;\"></span><span class=\"mord mathdefault\">c</span><span class=\"mspace\" style=\"margin-right: 0.277778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right: 0.277778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height: 1.04em; vertical-align: -0.126611em;\"></span><span class=\"mord\">±</span><span class=\"mord sqrt\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.913389em;\"><span class=\"svg-align\" style=\"top: -3em;\"><span class=\"pstrut\" style=\"height: 3em;\"></span><span class=\"mord\" style=\"padding-left: 0.833em;\"><span class=\"mord\"><span class=\"mord mathdefault\">a</span><span class=\"msupsub\"><span class=\"vlist-t\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.740108em;\"><span class=\"\" style=\"top: -2.989em; margin-right: 0.05em;\"><span class=\"pstrut\" style=\"height: 2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">2</span></span></span></span></span></span></span></span><span class=\"mspace\" style=\"margin-right: 0.222222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right: 0.222222em;\"></span><span class=\"mord\"><span class=\"mord mathdefault\">b</span><span class=\"msupsub\"><span class=\"vlist-t\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.740108em;\"><span class=\"\" style=\"top: -2.989em; margin-right: 0.05em;\"><span class=\"pstrut\" style=\"height: 2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">2</span></span></span></span></span></span></span></span></span></span><span class=\"\" style=\"top: -2.87339em;\"><span class=\"pstrut\" style=\"height: 3em;\"></span><span class=\"hide-tail\" style=\"min-width: 0.853em; height: 1.08em;\"><svg width=\"400em\" height=\"1.08em\" viewBox=\"0 0 400000 1080\" preserveAspectRatio=\"xMinYMin slice\"><path d=\"M95,702\nc-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14\nc0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54\nc44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10\ns173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429\nc69,-144,104.5,-217.7,106.5,-221\nl0 -0\nc5.3,-9.3,12,-14,20,-14\nH400000v40H845.2724\ns-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7\nc-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z\nM834 80h400000v40h-400000z\"></path></svg></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.126611em;\"><span class=\"\"></span></span></span></span></span></span></span></span></span> (把 latex放在 <code>$$ ... $$</code>中时，用diaplay模式渲染, 放在<code>$ ... $</code>中时，用inline模式渲染)</p>\n</li>\n</ul>\n<p>Markdown介绍点<a target=\"_blank\" href=\"/notebook/#markdown/tutorial.json\">这里</a></p>\n<p>Latex介绍点<a target=\"_blank\" href=\"/notebook/#latex/tutorial.json\">这里</a></p>\n</div>"
+			"content": "<div id=\"ot24\"><h5 id=\"markdown-和-latex\">Markdown 和 LaTex</h5>\n<p>我们使用：</p>\n<ul>\n<li><p><a target=\"_blank\" href=\"https://github.com/markedjs/marked\">marked</a> 渲染 <a target=\"_blank\" href=\"https://github.github.com/gfm/\">GitHub Flavored Markdown</a></p>\n</li>\n<li><p><a target=\"_blank\" href=\"https://katex.org/\">katex</a> 渲染 <code>LaTex</code>, 例如： <span><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>c</mi><mo>=</mo><mo>±</mo><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding=\"application/x-tex\"> c = \\pm\\sqrt{a^2 + b^2} </annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height: 0.43056em; vertical-align: 0em;\"></span><span class=\"mord mathdefault\">c</span><span class=\"mspace\" style=\"margin-right: 0.277778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right: 0.277778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height: 1.04em; vertical-align: -0.126611em;\"></span><span class=\"mord\">±</span><span class=\"mord sqrt\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.913389em;\"><span class=\"svg-align\" style=\"top: -3em;\"><span class=\"pstrut\" style=\"height: 3em;\"></span><span class=\"mord\" style=\"padding-left: 0.833em;\"><span class=\"mord\"><span class=\"mord mathdefault\">a</span><span class=\"msupsub\"><span class=\"vlist-t\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.740108em;\"><span class=\"\" style=\"top: -2.989em; margin-right: 0.05em;\"><span class=\"pstrut\" style=\"height: 2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">2</span></span></span></span></span></span></span></span><span class=\"mspace\" style=\"margin-right: 0.222222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right: 0.222222em;\"></span><span class=\"mord\"><span class=\"mord mathdefault\">b</span><span class=\"msupsub\"><span class=\"vlist-t\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.740108em;\"><span class=\"\" style=\"top: -2.989em; margin-right: 0.05em;\"><span class=\"pstrut\" style=\"height: 2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">2</span></span></span></span></span></span></span></span></span></span><span class=\"\" style=\"top: -2.87339em;\"><span class=\"pstrut\" style=\"height: 3em;\"></span><span class=\"hide-tail\" style=\"min-width: 0.853em; height: 1.08em;\"><svg width=\"400em\" height=\"1.08em\" viewBox=\"0 0 400000 1080\" preserveAspectRatio=\"xMinYMin slice\"><path d=\"M95,702\nc-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14\nc0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54\nc44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10\ns173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429\nc69,-144,104.5,-217.7,106.5,-221\nl0 -0\nc5.3,-9.3,12,-14,20,-14\nH400000v40H845.2724\ns-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7\nc-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z\nM834 80h400000v40h-400000z\"></path></svg></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.126611em;\"><span class=\"\"></span></span></span></span></span></span></span></span></span> (把 latex放在 <code>$$ ... $$</code>中时，用diaplay模式渲染, 放在<code>$ ... $</code>中时，用inline模式渲染)； <a target=\"_blank\" href=\"https://katex.org/docs/supported.html\">Supported Functions</a>, <a target=\"_blank\" href=\"https://katex.org/docs/support_table.html\">Support Table</a></p>\n</li>\n</ul>\n<p>Markdown介绍点<a target=\"_blank\" href=\"/notebook/#markdown/tutorial.json\">这里</a></p>\n<p>Latex介绍点<a target=\"_blank\" href=\"/notebook/#latex/tutorial.json\">这里</a></p>\n</div>"
 		}
 	},
 	"cell25": {
@@ -68,12 +79,34 @@
 	"cell26": {
 		"input": {
 			"type": "markdown",
-			"source": "##### 代码执行\n\n代码先由`typescript`编译为`ES5` javascript，再由[eval5](https://github.com/bplok20010/eval5)(js实现的js解释器), 在单独的`context`里解释执行, **没有使用** `eval()`\n\n多数情况下, `ES5` javascript已足够, 可以省略`var`在`un-restricted`模式下写代码, 具体请参照下面的例子\n\n当需要`面向对象`，`继承`等功能时，或者需要`ES6+`语言功能时，可以使用`typescript`写代码，比如[Discrete Hedging](#quantlib/discretehedging.json)示例\n\n渲染API: \n* Cell输出是最后一个`表达式`的解释结果, `对象`显示为 \\[object, object\\]\n* 使用`print()`显示原始类型：`number` 或者 `string`\n* 使用`table()`显示表格数据, 目前只支持对象数组，数组里的对象结构需要一致\n* 使用`plot()`显示图标. 我们使用[plotly](https://plot.ly/javascript/), 具体请参照下面的例子"
+			"source": "##### 代码执行\n\n代码先由`typescript`编译为`ES5` javascript，再由根据引擎执行代码：\n\n* <i class=\"fa fa-toggle-on\"></i> [eval5](https://github.com/bplok20010/eval5)(js实现的js解释器), 在单独的`context`里解释执行\n* <i class=\"fa fa-toggle-off\"></i> `eval is evil`, 但有时使用js解释器太慢, 比如Monte Carlo Simulation. 使用`eval`可以加速。 比例如 [Discrete Hedging](#quantlib/discretehedging.json), 可以用两个引擎计算，比较执行时间\n"
 		},
 		"show_editor": false,
 		"output": {
 			"type": "html",
-			"content": "<div id=\"ot26\"><h5 id=\"代码执行\">代码执行</h5>\n<p>代码先由<code>typescript</code>编译为<code>ES5</code> javascript，再由<a target=\"_blank\" href=\"https://github.com/bplok20010/eval5\">eval5</a>(js实现的js解释器), 在单独的<code>context</code>里解释执行, <strong>没有使用</strong> <code>eval()</code></p>\n<p>多数情况下, <code>ES5</code> javascript已足够, 可以省略<code>var</code>在<code>un-restricted</code>模式下写代码, 具体请参照下面的例子</p>\n<p>当需要<code>面向对象</code>，<code>继承</code>等功能时，或者需要<code>ES6+</code>语言功能时，可以使用<code>typescript</code>写代码，比如<a target=\"_blank\" href=\"#quantlib/discretehedging.json\">Discrete Hedging</a>示例</p>\n<p>渲染API: </p>\n<ul>\n<li>Cell输出是最后一个<code>表达式</code>的解释结果, <code>对象</code>显示为 [object, object]</li>\n<li>使用<code>print()</code>显示原始类型：<code>number</code> 或者 <code>string</code></li>\n<li>使用<code>table()</code>显示表格数据, 目前只支持对象数组，数组里的对象结构需要一致</li>\n<li>使用<code>plot()</code>显示图标. 我们使用<a target=\"_blank\" href=\"https://plot.ly/javascript/\">plotly</a>, 具体请参照下面的例子</li>\n</ul>\n</div>"
+			"content": "<div id=\"ot26\"><h5 id=\"代码执行\">代码执行</h5>\n<p>代码先由<code>typescript</code>编译为<code>ES5</code> javascript，再由根据引擎执行代码：</p>\n<ul>\n<li><i class=\"fa fa-toggle-on\"></i> <a target=\"_blank\" href=\"https://github.com/bplok20010/eval5\">eval5</a>(js实现的js解释器), 在单独的<code>context</code>里解释执行</li>\n<li><i class=\"fa fa-toggle-off\"></i> <code>eval is evil</code>, 但有时使用js解释器太慢, 比如Monte Carlo Simulation. 使用<code>eval</code>可以加速。 比例如 <a target=\"_blank\" href=\"#quantlib/discretehedging.json\">Discrete Hedging</a>, 可以用两个引擎计算，比较执行时间</li>\n</ul>\n</div>"
+		}
+	},
+	"cell29": {
+		"input": {
+			"type": "markdown",
+			"source": "##### JavaScript vs TypeScript\n多数情况下, `ES5` javascript已足够, 可以省略`var`在`un-restricted`模式下写代码, 具体请参照下面的例子\n\n当需要`面向对象`，`继承`等功能时，或者需要`ES6+`语言功能时，可以使用`typescript`写代码，比如[Discrete Hedging](#quantlib/discretehedging.json)示例"
+		},
+		"show_editor": false,
+		"output": {
+			"type": "html",
+			"content": "<div id=\"ot29\"><h5 id=\"javascript-vs-typescript\">JavaScript vs TypeScript</h5>\n<p>多数情况下, <code>ES5</code> javascript已足够, 可以省略<code>var</code>在<code>un-restricted</code>模式下写代码, 具体请参照下面的例子</p>\n<p>当需要<code>面向对象</code>，<code>继承</code>等功能时，或者需要<code>ES6+</code>语言功能时，可以使用<code>typescript</code>写代码，比如<a target=\"_blank\" href=\"#quantlib/discretehedging.json\">Discrete Hedging</a>示例</p>\n</div>"
+		}
+	},
+	"cell28": {
+		"input": {
+			"type": "markdown",
+			"source": "##### 渲染API\n* Cell输出是最后一个`表达式`的解释结果\n  * `对象`显示为 \\[object, object\\]\n  * 以后会有更过智能渲染，用户不需要自己调用渲染API\n* 使用`print()`显示原始类型：`number` 或者 `string`\n  * 可以在一个cell多次使用，结果都会显示\n* 使用`table()`显示表格数据\n  * 目前只支持对象数组\n  * 数组里的对象结构需要一致\n  * 目前可以一个cell多次使用，以可能会取消\n* 使用`plot()`显示图标. 我们使用[plotly](https://plot.ly/javascript/), 具体请参照下面的例子\n  * 图标为SVG格式，会占有全部cell输出\n  * 一个cell不能多次使用\n  * 不可以跟其他渲染API同时使用"
+		},
+		"show_editor": false,
+		"output": {
+			"type": "html",
+			"content": "<div id=\"ot28\"><h5 id=\"渲染api\">渲染API</h5>\n<ul>\n<li>Cell输出是最后一个<code>表达式</code>的解释结果<ul>\n<li><code>对象</code>显示为 [object, object]</li>\n<li>以后会有更过智能渲染，用户不需要自己调用渲染API</li>\n</ul>\n</li>\n<li>使用<code>print()</code>显示原始类型：<code>number</code> 或者 <code>string</code><ul>\n<li>可以在一个cell多次使用，结果都会显示</li>\n</ul>\n</li>\n<li>使用<code>table()</code>显示表格数据<ul>\n<li>目前只支持对象数组</li>\n<li>数组里的对象结构需要一致</li>\n<li>目前可以一个cell多次使用，以可能会取消</li>\n</ul>\n</li>\n<li>使用<code>plot()</code>显示图标. 我们使用<a target=\"_blank\" href=\"https://plot.ly/javascript/\">plotly</a>, 具体请参照下面的例子<ul>\n<li>图标为SVG格式，会占有全部cell输出</li>\n<li>一个cell不能多次使用</li>\n<li>不可以跟其他渲染API同时使用</li>\n</ul>\n</li>\n</ul>\n</div>"
 		}
 	},
 	"cell4": {
