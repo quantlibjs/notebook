@@ -1,310 +1,328 @@
 {
-	"cell0": {
-		"input": {
-			"type": "markdown",
-			"source": "#### 欢迎使用quantlib.js notebook\n\n这是一个轻量级Web App，可以像 `jupyter notebook` 一样进行 `交互式计算`, 整个网页托管在 `github page`, 页面加载后就离线。 "
-		},
-		"show_editor": false,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot0\"><h4 id=\"欢迎使用quantlibjs-notebook\">欢迎使用quantlib.js notebook</h4>\n<p>这是一个轻量级Web App，可以像 <code>jupyter notebook</code> 一样进行 <code>交互式计算</code>, 整个网页托管在 <code>github page</code>, 页面加载后就离线。 </p>\n</div>"
-		}
+	"setting": {
+		"interpreter": "eval5",
+		"typescript": false,
+		"locked": false
 	},
-	"cell21": {
-		"input": {
-			"type": "markdown",
-			"source": "##### 使用说明:\n\n通过顶部导航进行以下notebook级操作:\n* 点击 quantlib.js 链接刷新页面，重置notebook\n* 点击 <i class=\"fa fa-plus\"></i> 向选中的Cell下面插入新的Cell\n* 点击 <i class=\"fa fa-angle-double-up\"></i> 运行选中Cell上面所有的Cell\n* 点击 <i class=\"fa fa-angle-double-down\"></i> 运行选中Cell以及下面面所有的Cell\n* 点击 <i class=\"fa fa-forward\"></i> 运行整个notebook\n* 点击 <i class=\"fa fa-close\"></i> 清除所有输出"
+	"notebook": {
+		"cell0": {
+			"input": {
+				"type": "markdown",
+				"source": "### 欢迎使用quantlib.js notebook\n\n这是一个轻量级Web App，可以像 `jupyter notebook` 一样进行 `交互式计算`, 整个网页托管在 `github page`, 页面加载后就离线。 "
+			},
+			"show_editor": false,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot0\"><h3 id=\"欢迎使用quantlibjs-notebook\">欢迎使用quantlib.js notebook</h3>\n<p>这是一个轻量级Web App，可以像 <code>jupyter notebook</code> 一样进行 <code>交互式计算</code>, 整个网页托管在 <code>github page</code>, 页面加载后就离线。 </p>\n</div>"
+			}
 		},
-		"show_editor": false,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot21\"><h5 id=\"使用说明\">使用说明:</h5>\n<p>通过顶部导航进行以下notebook级操作:</p>\n<ul>\n<li>点击 quantlib.js 链接刷新页面，重置notebook</li>\n<li>点击 <i class=\"fa fa-plus\"></i> 向选中的Cell下面插入新的Cell</li>\n<li>点击 <i class=\"fa fa-angle-double-up\"></i> 运行选中Cell上面所有的Cell</li>\n<li>点击 <i class=\"fa fa-angle-double-down\"></i> 运行选中Cell以及下面面所有的Cell</li>\n<li>点击 <i class=\"fa fa-forward\"></i> 运行整个notebook</li>\n<li>点击 <i class=\"fa fa-close\"></i> 清除所有输出</li>\n</ul>\n</div>"
-		}
-	},
-	"cell22": {
-		"input": {
-			"type": "markdown",
-			"source": "##### Cell级操作(鼠标选中时):\n\n* 点击 <i class=\"fa fa-code\"></i> or <i class=\"fa fa-sticky-note-o\"></i> 切换Cell类型, 可以是 `code` 或 `markdown`\n* 点击 <i class=\"fa fa-navicon\"></i> or <i class=\"fa fa-ellipsis-v\"></i> 显示/隐藏 编辑器\n* 点击 <i class=\"fa fa-play\"></i> 执行当前Cell\n* 点击 <i class=\"fa fa-angle-up\"></i> 向上移动当前Cell\n* 点击 <i class=\"fa fa-trash-o\"></i> 删除当前cell\n* 点击 <i class=\"fa fa-angle-down\"></i> 向下移动当前Cell"
+		"cell21": {
+			"input": {
+				"type": "markdown",
+				"source": "#### 使用说明\n\n"
+			},
+			"show_editor": false,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot21\"><h4 id=\"使用说明\">使用说明</h4>\n</div>"
+			}
 		},
-		"show_editor": false,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot22\"><h5 id=\"cell级操作鼠标选中时\">Cell级操作(鼠标选中时):</h5>\n<ul>\n<li>点击 <i class=\"fa fa-code\"></i> or <i class=\"fa fa-sticky-note-o\"></i> 切换Cell类型, 可以是 <code>code</code> 或 <code>markdown</code></li>\n<li>点击 <i class=\"fa fa-navicon\"></i> or <i class=\"fa fa-ellipsis-v\"></i> 显示/隐藏 编辑器</li>\n<li>点击 <i class=\"fa fa-play\"></i> 执行当前Cell</li>\n<li>点击 <i class=\"fa fa-angle-up\"></i> 向上移动当前Cell</li>\n<li>点击 <i class=\"fa fa-trash-o\"></i> 删除当前cell</li>\n<li>点击 <i class=\"fa fa-angle-down\"></i> 向下移动当前Cell</li>\n</ul>\n</div>"
-		}
-	},
-	"cell27": {
-		"input": {
-			"type": "markdown",
-			"source": "##### 设置\n\n* 点击 <i class=\"fa fa-inbox\"></i> 或 <i class=\"fa fa-fire\"></i>切换引擎, 默认是`eval5`. 请参照 `代码执行`部分\n* 点击 <i class=\"fa fa-adjust\"></i> 切换明暗主题色\n* 点击 <i class=\"fa fa-toggle-on\"></i> 或 <i class=\"fa fa-toggle-off\"></i>切换`下一个`Cell功能，如果启用，执行一个Cell后，下一个Cell回选中\n\n文件:\n* 点击 <i class=\"fa fa-download\"></i>从当前notebook生产json文件，下载到本地磁盘\n* 用文件名输入框更改文件名\n* 点击 <i class=\"fa fa-upload\"></i> 从本地磁盘，上传notebook json文件到浏览器\n* 拖拽文件到此页面也可上传notebook json文件到浏览器"
+		"cell30": {
+			"input": {
+				"type": "markdown",
+				"source": "##### Notebook操作\n\n通过顶部导航进行以下notebook级操作:\n* 点击 quantlib.js 链接刷新页面，重置notebook\n* 点击 <i class=\"fa fa-plus\"></i> 向选中的Cell下面插入新的Cell\n* 点击 <i class=\"fa fa-angle-double-up\"></i> 运行选中Cell上面所有的Cell\n* 点击 <i class=\"fa fa-angle-double-down\"></i> 运行选中Cell以及下面面所有的Cell\n* 点击 <i class=\"fa fa-forward\"></i> 运行整个notebook\n* 点击 <i class=\"fa fa-close\"></i> 清除所有输出"
+			},
+			"show_editor": false,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot30\"><h5 id=\"notebook操作\">Notebook操作</h5>\n<p>通过顶部导航进行以下notebook级操作:</p>\n<ul>\n<li>点击 quantlib.js 链接刷新页面，重置notebook</li>\n<li>点击 <i class=\"fa fa-plus\"></i> 向选中的Cell下面插入新的Cell</li>\n<li>点击 <i class=\"fa fa-angle-double-up\"></i> 运行选中Cell上面所有的Cell</li>\n<li>点击 <i class=\"fa fa-angle-double-down\"></i> 运行选中Cell以及下面面所有的Cell</li>\n<li>点击 <i class=\"fa fa-forward\"></i> 运行整个notebook</li>\n<li>点击 <i class=\"fa fa-close\"></i> 清除所有输出</li>\n</ul>\n</div>"
+			}
 		},
-		"show_editor": false,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot27\"><h5 id=\"设置\">设置</h5>\n<ul>\n<li>点击 <i class=\"fa fa-inbox\"></i> 或 <i class=\"fa fa-fire\"></i>切换引擎, 默认是<code>eval5</code>. 请参照 <code>代码执行</code>部分</li>\n<li>点击 <i class=\"fa fa-adjust\"></i> 切换明暗主题色</li>\n<li>点击 <i class=\"fa fa-toggle-on\"></i> 或 <i class=\"fa fa-toggle-off\"></i>切换<code>下一个</code>Cell功能，如果启用，执行一个Cell后，下一个Cell回选中</li>\n</ul>\n<p>文件:</p>\n<ul>\n<li>点击 <i class=\"fa fa-download\"></i>从当前notebook生产json文件，下载到本地磁盘</li>\n<li>用文件名输入框更改文件名</li>\n<li>点击 <i class=\"fa fa-upload\"></i> 从本地磁盘，上传notebook json文件到浏览器</li>\n<li>拖拽文件到此页面也可上传notebook json文件到浏览器</li>\n</ul>\n</div>"
-		}
-	},
-	"cell23": {
-		"input": {
-			"type": "markdown",
-			"source": "##### 一次性URL加载\n\n* 可以用 `https://quantlib.js.org/notebook/#https://mydomain.com/link-to-notebook.json` 这样的链接从url加载notebook，文件名会显示在输入框"
+		"cell22": {
+			"input": {
+				"type": "markdown",
+				"source": "##### Cell操作\n鼠标选中时:\n* 点击 <i class=\"fa fa-code\"></i> or <i class=\"fa fa-sticky-note-o\"></i> 切换Cell类型, 可以是 `code` 或 `markdown`\n* 点击 <i class=\"fa fa-navicon\"></i> or <i class=\"fa fa-ellipsis-v\"></i> 显示/隐藏 编辑器\n* 点击 <i class=\"fa fa-play\"></i> 执行当前Cell\n* 点击 <i class=\"fa fa-angle-up\"></i> 向上移动当前Cell\n* 点击 <i class=\"fa fa-trash-o\"></i> 删除当前cell\n* 点击 <i class=\"fa fa-angle-down\"></i> 向下移动当前Cell"
+			},
+			"show_editor": false,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot22\"><h5 id=\"cell操作\">Cell操作</h5>\n<p>鼠标选中时:</p>\n<ul>\n<li>点击 <i class=\"fa fa-code\"></i> or <i class=\"fa fa-sticky-note-o\"></i> 切换Cell类型, 可以是 <code>code</code> 或 <code>markdown</code></li>\n<li>点击 <i class=\"fa fa-navicon\"></i> or <i class=\"fa fa-ellipsis-v\"></i> 显示/隐藏 编辑器</li>\n<li>点击 <i class=\"fa fa-play\"></i> 执行当前Cell</li>\n<li>点击 <i class=\"fa fa-angle-up\"></i> 向上移动当前Cell</li>\n<li>点击 <i class=\"fa fa-trash-o\"></i> 删除当前cell</li>\n<li>点击 <i class=\"fa fa-angle-down\"></i> 向下移动当前Cell</li>\n</ul>\n</div>"
+			}
 		},
-		"show_editor": false,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot23\"><h5 id=\"一次性url加载\">一次性URL加载</h5>\n<ul>\n<li>可以用 <code>https://quantlib.js.org/notebook/#https://mydomain.com/link-to-notebook.json</code> 这样的链接从url加载notebook，文件名会显示在输入框</li>\n</ul>\n</div>"
-		}
-	},
-	"cell24": {
-		"input": {
-			"type": "markdown",
-			"source": "##### Markdown 和 LaTex\n\n我们使用：\n\n* [marked](https://github.com/markedjs/marked) 渲染 [GitHub Flavored Markdown](https://github.github.com/gfm/)\n\n* [katex](https://katex.org/) 渲染 `LaTex`, 例如： $ c = \\pm\\sqrt{a^2 + b^2} $ (把 latex放在 `$$ ... $$ `中时，用diaplay模式渲染, 放在`$ ... $`中时，用inline模式渲染)； [Supported Functions](https://katex.org/docs/supported.html), [Support Table](https://katex.org/docs/support_table.html)\n\nMarkdown介绍点[这里](/notebook/#markdown/tutorial.json)\n\nLatex介绍点[这里](/notebook/#latex/tutorial.json)"
+		"cell27": {
+			"input": {
+				"type": "markdown",
+				"source": "##### 设置\n\n* 通过`三泰`复选框选择`下一个Cell` 功能, 默认关闭\n  * `中间状态` : 执行一个Cell后，选中下一个Cell\n  * `勾选` : 执行一个Cell后，选中并滚动到下一个Cell\n* 点击 `Switch`控件 切换引擎, 默认是`eval5`. 请参照 `代码执行`部分\n* 点击 <i class=\"fa fa-lock\"></i> 或 <i class=\"fa fa-unlock-alt\"></i> 设置notebook是否可编辑\n* 点击 <i class=\"fa fa-toggle-on\"></i> 或 <i class=\"fa fa-toggle-off\"></i> 设置是否使用 `typescript`,  请参照`JavaScript vs TypeScript`\n* 点击 <i class=\"fa fa-outdent\"></i> 或 <i class=\"fa fa-indent\"></i> 显示/隐藏目录\n* 点击 <i class=\"fa fa-adjust\"></i> 切换明暗主题色\n* 点击 <i class=\"fa fa-refresh\"></i> 重置iframe sandbox\n\n文件:\n* 点击 <i class=\"fa fa-download\"></i>从当前notebook生产json文件，下载到本地磁盘\n* 用文件名输入框更改文件名\n* 点击 <i class=\"fa fa-upload\"></i> 从本地磁盘，上传notebook json文件到浏览器\n* 拖拽文件到此页面也可上传notebook json文件到浏览器"
+			},
+			"show_editor": false,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot27\"><h5 id=\"设置\">设置</h5>\n<ul>\n<li>通过<code>三泰</code>复选框选择<code>下一个Cell</code> 功能, 默认关闭<ul>\n<li><code>中间状态</code> : 执行一个Cell后，选中下一个Cell</li>\n<li><code>勾选</code> : 执行一个Cell后，选中并滚动到下一个Cell</li>\n</ul>\n</li>\n<li>点击 <code>Switch</code>控件 切换引擎, 默认是<code>eval5</code>. 请参照 <code>代码执行</code>部分</li>\n<li>点击 <i class=\"fa fa-lock\"></i> 或 <i class=\"fa fa-unlock-alt\"></i> 设置notebook是否可编辑</li>\n<li>点击 <i class=\"fa fa-toggle-on\"></i> 或 <i class=\"fa fa-toggle-off\"></i> 设置是否使用 <code>typescript</code>,  请参照<code>JavaScript vs TypeScript</code></li>\n<li>点击 <i class=\"fa fa-outdent\"></i> 或 <i class=\"fa fa-indent\"></i> 显示/隐藏目录</li>\n<li>点击 <i class=\"fa fa-adjust\"></i> 切换明暗主题色</li>\n<li>点击 <i class=\"fa fa-refresh\"></i> 重置iframe sandbox</li>\n</ul>\n<p>文件:</p>\n<ul>\n<li>点击 <i class=\"fa fa-download\"></i>从当前notebook生产json文件，下载到本地磁盘</li>\n<li>用文件名输入框更改文件名</li>\n<li>点击 <i class=\"fa fa-upload\"></i> 从本地磁盘，上传notebook json文件到浏览器</li>\n<li>拖拽文件到此页面也可上传notebook json文件到浏览器</li>\n</ul>\n</div>"
+			}
 		},
-		"show_editor": false,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot24\"><h5 id=\"markdown-和-latex\">Markdown 和 LaTex</h5>\n<p>我们使用：</p>\n<ul>\n<li><p><a target=\"_blank\" href=\"https://github.com/markedjs/marked\">marked</a> 渲染 <a target=\"_blank\" href=\"https://github.github.com/gfm/\">GitHub Flavored Markdown</a></p>\n</li>\n<li><p><a target=\"_blank\" href=\"https://katex.org/\">katex</a> 渲染 <code>LaTex</code>, 例如： <span><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>c</mi><mo>=</mo><mo>±</mo><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding=\"application/x-tex\"> c = \\pm\\sqrt{a^2 + b^2} </annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height: 0.43056em; vertical-align: 0em;\"></span><span class=\"mord mathdefault\">c</span><span class=\"mspace\" style=\"margin-right: 0.277778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right: 0.277778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height: 1.04em; vertical-align: -0.126611em;\"></span><span class=\"mord\">±</span><span class=\"mord sqrt\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.913389em;\"><span class=\"svg-align\" style=\"top: -3em;\"><span class=\"pstrut\" style=\"height: 3em;\"></span><span class=\"mord\" style=\"padding-left: 0.833em;\"><span class=\"mord\"><span class=\"mord mathdefault\">a</span><span class=\"msupsub\"><span class=\"vlist-t\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.740108em;\"><span class=\"\" style=\"top: -2.989em; margin-right: 0.05em;\"><span class=\"pstrut\" style=\"height: 2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">2</span></span></span></span></span></span></span></span><span class=\"mspace\" style=\"margin-right: 0.222222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right: 0.222222em;\"></span><span class=\"mord\"><span class=\"mord mathdefault\">b</span><span class=\"msupsub\"><span class=\"vlist-t\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.740108em;\"><span class=\"\" style=\"top: -2.989em; margin-right: 0.05em;\"><span class=\"pstrut\" style=\"height: 2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">2</span></span></span></span></span></span></span></span></span></span><span class=\"\" style=\"top: -2.87339em;\"><span class=\"pstrut\" style=\"height: 3em;\"></span><span class=\"hide-tail\" style=\"min-width: 0.853em; height: 1.08em;\"><svg width=\"400em\" height=\"1.08em\" viewBox=\"0 0 400000 1080\" preserveAspectRatio=\"xMinYMin slice\"><path d=\"M95,702\nc-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14\nc0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54\nc44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10\ns173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429\nc69,-144,104.5,-217.7,106.5,-221\nl0 -0\nc5.3,-9.3,12,-14,20,-14\nH400000v40H845.2724\ns-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7\nc-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z\nM834 80h400000v40h-400000z\"></path></svg></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.126611em;\"><span class=\"\"></span></span></span></span></span></span></span></span></span> (把 latex放在 <code>$$ ... $$</code>中时，用diaplay模式渲染, 放在<code>$ ... $</code>中时，用inline模式渲染)； <a target=\"_blank\" href=\"https://katex.org/docs/supported.html\">Supported Functions</a>, <a target=\"_blank\" href=\"https://katex.org/docs/support_table.html\">Support Table</a></p>\n</li>\n</ul>\n<p>Markdown介绍点<a target=\"_blank\" href=\"/notebook/#markdown/tutorial.json\">这里</a></p>\n<p>Latex介绍点<a target=\"_blank\" href=\"/notebook/#latex/tutorial.json\">这里</a></p>\n</div>"
-		}
-	},
-	"cell25": {
-		"input": {
-			"type": "markdown",
-			"source": "##### 保护LaTex\n\nLaTeX可能包含字符被识别为Markdown, 比如： `$ {a}_{1} {a}_{2} $`， 这些LaTex字符会被保护，并被渲染为LaTeX $ {a}_{1} {a}_{2} $，而不是Markdown {a}_{1} {a}_{2}"
+		"cell23": {
+			"input": {
+				"type": "markdown",
+				"source": "##### 一次性URL加载\n\n* 可以用 `https://quantlib.js.org/notebook/#https://mydomain.com/link-to-notebook.json` 这样的链接从url加载notebook，文件名会显示在输入框"
+			},
+			"show_editor": false,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot23\"><h5 id=\"一次性url加载\">一次性URL加载</h5>\n<ul>\n<li>可以用 <code>https://quantlib.js.org/notebook/#https://mydomain.com/link-to-notebook.json</code> 这样的链接从url加载notebook，文件名会显示在输入框</li>\n</ul>\n</div>"
+			}
 		},
-		"show_editor": false,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot25\"><h5 id=\"保护latex\">保护LaTex</h5>\n<p>LaTeX可能包含字符被识别为Markdown, 比如： <code>$ {a}_{1} {a}_{2} $</code>， 这些LaTex字符会被保护，并被渲染为LaTeX <span><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><msub><mi>a</mi><mn>2</mn></msub></mrow><annotation encoding=\"application/x-tex\"> {a}_{1} {a}_{2} </annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height: 0.58056em; vertical-align: -0.15em;\"></span><span class=\"mord\"><span class=\"mord\"><span class=\"mord mathdefault\">a</span></span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.301108em;\"><span class=\"\" style=\"top: -2.55em; margin-right: 0.05em;\"><span class=\"pstrut\" style=\"height: 2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\"><span class=\"mord mtight\">1</span></span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.15em;\"><span class=\"\"></span></span></span></span></span></span><span class=\"mord\"><span class=\"mord\"><span class=\"mord mathdefault\">a</span></span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.301108em;\"><span class=\"\" style=\"top: -2.55em; margin-right: 0.05em;\"><span class=\"pstrut\" style=\"height: 2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\"><span class=\"mord mtight\">2</span></span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.15em;\"><span class=\"\"></span></span></span></span></span></span></span></span></span></span>，而不是Markdown {a}<em>{1} {a}</em>{2}</p>\n</div>"
-		}
-	},
-	"cell26": {
-		"input": {
-			"type": "markdown",
-			"source": "##### 代码执行\n\n代码在`iframe sandbox`执行，先由`typescript`编译为`ES5` javascript，再由根据引擎执行代码：\n\n* <i class=\"fa fa-inbox\"></i> [eval5](https://github.com/bplok20010/eval5)(js实现的js解释器), 在单独的`context`里解释执行\n* <i class=\"fa fa-fire\"></i> `eval is evil`, 但有时使用js解释器太慢, 比如Monte Carlo Simulation. 使用`eval`可以加速。 比例如 [Discrete Hedging](#quantlib/discretehedging.json), 可以用两个引擎计算，比较执行时间\n\n**Warning**: 使用`eval`有很大安全隐患, 只有在绝对必要时才使用"
+		"cell24": {
+			"input": {
+				"type": "markdown",
+				"source": "##### Markdown 和 LaTex\n\n我们使用：\n\n* [marked](https://github.com/markedjs/marked) 渲染 [GitHub Flavored Markdown](https://github.github.com/gfm/)\n\n* [katex](https://katex.org/) 渲染 `LaTex`, 例如： $ c = \\pm\\sqrt{a^2 + b^2} $ (把 latex放在 `$$ ... $$ `中时，用diaplay模式渲染, 放在`$ ... $`中时，用inline模式渲染)； [Supported Functions](https://katex.org/docs/supported.html), [Support Table](https://katex.org/docs/support_table.html)\n\nMarkdown介绍点[这里](/notebook/#markdown/tutorial.json)\n\nLatex介绍点[这里](/notebook/#latex/tutorial.json)"
+			},
+			"show_editor": false,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot24\"><h5 id=\"markdown-和-latex\">Markdown 和 LaTex</h5>\n<p>我们使用：</p>\n<ul>\n<li><p><a target=\"_blank\" href=\"https://github.com/markedjs/marked\">marked</a> 渲染 <a target=\"_blank\" href=\"https://github.github.com/gfm/\">GitHub Flavored Markdown</a></p>\n</li>\n<li><p><a target=\"_blank\" href=\"https://katex.org/\">katex</a> 渲染 <code>LaTex</code>, 例如： <span><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>c</mi><mo>=</mo><mo>±</mo><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding=\"application/x-tex\"> c = \\pm\\sqrt{a^2 + b^2} </annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height: 0.43056em; vertical-align: 0em;\"></span><span class=\"mord mathdefault\">c</span><span class=\"mspace\" style=\"margin-right: 0.277778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right: 0.277778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height: 1.04em; vertical-align: -0.126611em;\"></span><span class=\"mord\">±</span><span class=\"mord sqrt\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.913389em;\"><span class=\"svg-align\" style=\"top: -3em;\"><span class=\"pstrut\" style=\"height: 3em;\"></span><span class=\"mord\" style=\"padding-left: 0.833em;\"><span class=\"mord\"><span class=\"mord mathdefault\">a</span><span class=\"msupsub\"><span class=\"vlist-t\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.740108em;\"><span class=\"\" style=\"top: -2.989em; margin-right: 0.05em;\"><span class=\"pstrut\" style=\"height: 2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">2</span></span></span></span></span></span></span></span><span class=\"mspace\" style=\"margin-right: 0.222222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right: 0.222222em;\"></span><span class=\"mord\"><span class=\"mord mathdefault\">b</span><span class=\"msupsub\"><span class=\"vlist-t\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.740108em;\"><span class=\"\" style=\"top: -2.989em; margin-right: 0.05em;\"><span class=\"pstrut\" style=\"height: 2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">2</span></span></span></span></span></span></span></span></span></span><span class=\"\" style=\"top: -2.87339em;\"><span class=\"pstrut\" style=\"height: 3em;\"></span><span class=\"hide-tail\" style=\"min-width: 0.853em; height: 1.08em;\"><svg width=\"400em\" height=\"1.08em\" viewBox=\"0 0 400000 1080\" preserveAspectRatio=\"xMinYMin slice\"><path d=\"M95,702\nc-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14\nc0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54\nc44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10\ns173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429\nc69,-144,104.5,-217.7,106.5,-221\nl0 -0\nc5.3,-9.3,12,-14,20,-14\nH400000v40H845.2724\ns-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7\nc-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z\nM834 80h400000v40h-400000z\"></path></svg></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.126611em;\"><span class=\"\"></span></span></span></span></span></span></span></span></span> (把 latex放在 <code>$$ ... $$</code>中时，用diaplay模式渲染, 放在<code>$ ... $</code>中时，用inline模式渲染)； <a target=\"_blank\" href=\"https://katex.org/docs/supported.html\">Supported Functions</a>, <a target=\"_blank\" href=\"https://katex.org/docs/support_table.html\">Support Table</a></p>\n</li>\n</ul>\n<p>Markdown介绍点<a target=\"_blank\" href=\"/notebook/#markdown/tutorial.json\">这里</a></p>\n<p>Latex介绍点<a target=\"_blank\" href=\"/notebook/#latex/tutorial.json\">这里</a></p>\n</div>"
+			}
 		},
-		"show_editor": false,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot26\"><h5 id=\"代码执行\">代码执行</h5>\n<p>代码在<code>iframe sandbox</code>执行，先由<code>typescript</code>编译为<code>ES5</code> javascript，再由根据引擎执行代码：</p>\n<ul>\n<li><i class=\"fa fa-inbox\"></i> <a target=\"_blank\" href=\"https://github.com/bplok20010/eval5\">eval5</a>(js实现的js解释器), 在单独的<code>context</code>里解释执行</li>\n<li><i class=\"fa fa-fire\"></i> <code>eval is evil</code>, 但有时使用js解释器太慢, 比如Monte Carlo Simulation. 使用<code>eval</code>可以加速。 比例如 <a target=\"_blank\" href=\"#quantlib/discretehedging.json\">Discrete Hedging</a>, 可以用两个引擎计算，比较执行时间</li>\n</ul>\n<p><strong>Warning</strong>: 使用<code>eval</code>有很大安全隐患, 只有在绝对必要时才使用</p>\n</div>"
-		}
-	},
-	"cell29": {
-		"input": {
-			"type": "markdown",
-			"source": "##### JavaScript vs TypeScript\n多数情况下, `ES5` javascript已足够, 可以省略`var`在`un-restricted`模式下写代码, 具体请参照下面的例子\n\n当需要`面向对象`，`继承`等功能时，或者需要`ES6+`语言功能时，可以使用`typescript`写代码，比如[Discrete Hedging](#quantlib/discretehedging.json)示例"
+		"cell25": {
+			"input": {
+				"type": "markdown",
+				"source": "##### 保护LaTex\n\nLaTeX可能包含字符被识别为Markdown, 比如： `$ {a}_{1} {a}_{2} $`， 这些LaTex字符会被保护，并被渲染为LaTeX $ {a}_{1} {a}_{2} $，而不是Markdown {a}_{1} {a}_{2}"
+			},
+			"show_editor": false,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot25\"><h5 id=\"保护latex\">保护LaTex</h5>\n<p>LaTeX可能包含字符被识别为Markdown, 比如： <code>$ {a}_{1} {a}_{2} $</code>， 这些LaTex字符会被保护，并被渲染为LaTeX <span><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><msub><mi>a</mi><mn>2</mn></msub></mrow><annotation encoding=\"application/x-tex\"> {a}_{1} {a}_{2} </annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height: 0.58056em; vertical-align: -0.15em;\"></span><span class=\"mord\"><span class=\"mord\"><span class=\"mord mathdefault\">a</span></span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.301108em;\"><span class=\"\" style=\"top: -2.55em; margin-right: 0.05em;\"><span class=\"pstrut\" style=\"height: 2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\"><span class=\"mord mtight\">1</span></span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.15em;\"><span class=\"\"></span></span></span></span></span></span><span class=\"mord\"><span class=\"mord\"><span class=\"mord mathdefault\">a</span></span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.301108em;\"><span class=\"\" style=\"top: -2.55em; margin-right: 0.05em;\"><span class=\"pstrut\" style=\"height: 2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\"><span class=\"mord mtight\">2</span></span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.15em;\"><span class=\"\"></span></span></span></span></span></span></span></span></span></span>，而不是Markdown {a}<em>{1} {a}</em>{2}</p>\n</div>"
+			}
 		},
-		"show_editor": false,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot29\"><h5 id=\"javascript-vs-typescript\">JavaScript vs TypeScript</h5>\n<p>多数情况下, <code>ES5</code> javascript已足够, 可以省略<code>var</code>在<code>un-restricted</code>模式下写代码, 具体请参照下面的例子</p>\n<p>当需要<code>面向对象</code>，<code>继承</code>等功能时，或者需要<code>ES6+</code>语言功能时，可以使用<code>typescript</code>写代码，比如<a target=\"_blank\" href=\"#quantlib/discretehedging.json\">Discrete Hedging</a>示例</p>\n</div>"
-		}
-	},
-	"cell28": {
-		"input": {
-			"type": "markdown",
-			"source": "##### 渲染API\n* Cell输出是最后一个`表达式`的解释结果\n  * `对象`显示为 \\[object, object\\]\n  * 以后会有更过智能渲染，用户不需要自己调用渲染API\n* 使用`print()`显示原始类型：`number` 或者 `string`\n  * 可以在一个cell多次使用，结果都会显示\n* 使用`table()`显示表格数据\n  * 目前只支持对象数组\n  * 数组里的对象结构需要一致\n  * 目前可以一个cell多次使用，以可能会取消\n* 使用`plot()`显示图标. 我们使用[plotly](https://plot.ly/javascript/), 具体请参照下面的例子\n  * 图标为SVG格式，会占有全部cell输出\n  * 一个cell不能多次使用\n  * 不可以跟其他渲染API同时使用"
+		"cell26": {
+			"input": {
+				"type": "markdown",
+				"source": "##### 代码执行\n\n代码使用一下引擎，在`iframe sandbox`执行：\n\n* [eval5](https://github.com/bplok20010/eval5)(js实现的js解释器), 在单独的`context`里解释执行\n* `eval is evil`, 但有时使用js解释器太慢, 比如Monte Carlo Simulation. 使用`eval`可以加速。 比例如 [Discrete Hedging](#quantlib/discretehedging.json), 可以用两个引擎计算，比较执行时间\n\n**Warning**: 使用`eval`有安全隐患, 只有在绝对必要时才使用"
+			},
+			"show_editor": false,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot26\"><h5 id=\"代码执行\">代码执行</h5>\n<p>代码使用一下引擎，在<code>iframe sandbox</code>执行：</p>\n<ul>\n<li><a target=\"_blank\" href=\"https://github.com/bplok20010/eval5\">eval5</a>(js实现的js解释器), 在单独的<code>context</code>里解释执行</li>\n<li><code>eval is evil</code>, 但有时使用js解释器太慢, 比如Monte Carlo Simulation. 使用<code>eval</code>可以加速。 比例如 <a target=\"_blank\" href=\"#quantlib/discretehedging.json\">Discrete Hedging</a>, 可以用两个引擎计算，比较执行时间</li>\n</ul>\n<p><strong>Warning</strong>: 使用<code>eval</code>有安全隐患, 只有在绝对必要时才使用</p>\n</div>"
+			}
 		},
-		"show_editor": false,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot28\"><h5 id=\"渲染api\">渲染API</h5>\n<ul>\n<li>Cell输出是最后一个<code>表达式</code>的解释结果<ul>\n<li><code>对象</code>显示为 [object, object]</li>\n<li>以后会有更过智能渲染，用户不需要自己调用渲染API</li>\n</ul>\n</li>\n<li>使用<code>print()</code>显示原始类型：<code>number</code> 或者 <code>string</code><ul>\n<li>可以在一个cell多次使用，结果都会显示</li>\n</ul>\n</li>\n<li>使用<code>table()</code>显示表格数据<ul>\n<li>目前只支持对象数组</li>\n<li>数组里的对象结构需要一致</li>\n<li>目前可以一个cell多次使用，以可能会取消</li>\n</ul>\n</li>\n<li>使用<code>plot()</code>显示图标. 我们使用<a target=\"_blank\" href=\"https://plot.ly/javascript/\">plotly</a>, 具体请参照下面的例子<ul>\n<li>图标为SVG格式，会占有全部cell输出</li>\n<li>一个cell不能多次使用</li>\n<li>不可以跟其他渲染API同时使用</li>\n</ul>\n</li>\n</ul>\n</div>"
-		}
-	},
-	"cell4": {
-		"input": {
-			"type": "markdown",
-			"source": "#### 使用quantlib.js来计算权证"
+		"cell29": {
+			"input": {
+				"type": "markdown",
+				"source": "##### JavaScript vs TypeScript\n\n当设置<i class=\"fa fa-toggle-on\"></i>开启, 代码先由`typescript`编译为`ES5 javascript`, 再由解释器执行 \n\n* 多数情况下, `ES5` javascript已足够, 可以省略`var`在`un-restricted`模式下写代码, 具体请参照下面的例子\n* 当需要`面向对象`，`继承`等功能时，或者需要`ES6+`语言功能时，可以使用`typescript`写代码，比如[Discrete Hedging](#quantlib/discretehedging.json)示例"
+			},
+			"show_editor": false,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot29\"><h5 id=\"javascript-vs-typescript\">JavaScript vs TypeScript</h5>\n<p>当设置<i class=\"fa fa-toggle-on\"></i>开启, 代码先由<code>typescript</code>编译为<code>ES5 javascript</code>, 再由解释器执行 </p>\n<ul>\n<li>多数情况下, <code>ES5</code> javascript已足够, 可以省略<code>var</code>在<code>un-restricted</code>模式下写代码, 具体请参照下面的例子</li>\n<li>当需要<code>面向对象</code>，<code>继承</code>等功能时，或者需要<code>ES6+</code>语言功能时，可以使用<code>typescript</code>写代码，比如<a target=\"_blank\" href=\"#quantlib/discretehedging.json\">Discrete Hedging</a>示例</li>\n</ul>\n</div>"
+			}
 		},
-		"show_editor": false,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot4\"><h4 id=\"使用quantlibjs来计算权证\">使用quantlib.js来计算权证</h4>\n</div>"
-		}
-	},
-	"cell3": {
-		"input": {
-			"type": "javascript",
-			"source": "today = DateExt.UTC('7,March,2014');\nSettings.evaluationDate.set(today);\ntoday;"
+		"cell28": {
+			"input": {
+				"type": "markdown",
+				"source": "##### 渲染API\n* Cell输出是最后一个`表达式`的解释结果\n  * `对象`显示为 \\[object, object\\]\n  * 以后会有更过智能渲染，用户不需要自己调用渲染API\n* 使用`print()`显示原始类型：`number` 或者 `string`\n  * 可以在一个cell多次使用，结果都会显示\n* 使用`table()`显示表格数据\n  * 目前只支持对象数组\n  * 数组里的对象结构需要一致\n  * 目前可以一个cell多次使用，以可能会取消\n* 使用`plot()`显示图标. 我们使用[plotly](https://plot.ly/javascript/), 具体请参照下面的例子\n  * 图标为SVG格式，会占有全部cell输出\n  * 一个cell不能多次使用\n  * 不可以跟其他渲染API同时使用"
+			},
+			"show_editor": false,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot28\"><h5 id=\"渲染api\">渲染API</h5>\n<ul>\n<li>Cell输出是最后一个<code>表达式</code>的解释结果<ul>\n<li><code>对象</code>显示为 [object, object]</li>\n<li>以后会有更过智能渲染，用户不需要自己调用渲染API</li>\n</ul>\n</li>\n<li>使用<code>print()</code>显示原始类型：<code>number</code> 或者 <code>string</code><ul>\n<li>可以在一个cell多次使用，结果都会显示</li>\n</ul>\n</li>\n<li>使用<code>table()</code>显示表格数据<ul>\n<li>目前只支持对象数组</li>\n<li>数组里的对象结构需要一致</li>\n<li>目前可以一个cell多次使用，以可能会取消</li>\n</ul>\n</li>\n<li>使用<code>plot()</code>显示图标. 我们使用<a target=\"_blank\" href=\"https://plot.ly/javascript/\">plotly</a>, 具体请参照下面的例子<ul>\n<li>图标为SVG格式，会占有全部cell输出</li>\n<li>一个cell不能多次使用</li>\n<li>不可以跟其他渲染API同时使用</li>\n</ul>\n</li>\n</ul>\n</div>"
+			}
 		},
-		"show_editor": true,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot3\"><code>Fri Mar 07 2014 08:00:00 GMT+0800 (Hong Kong Standard Time)</code></div>"
-		}
-	},
-	"cell5": {
-		"input": {
-			"type": "markdown",
-			"source": "#### 权证\n创建权证只需相关的合同信息，市场数据根据计算方法在之后加载"
+		"cell4": {
+			"input": {
+				"type": "markdown",
+				"source": "#### 例子"
+			},
+			"show_editor": false,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot4\"><h4 id=\"例子\">例子</h4>\n</div>"
+			}
 		},
-		"show_editor": false,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot5\"><h4 id=\"权证\">权证</h4>\n<p>创建权证只需相关的合同信息，市场数据根据计算方法在之后加载</p>\n</div>"
-		}
-	},
-	"cell6": {
-		"input": {
-			"type": "javascript",
-			"source": "option = new EuropeanOption(\n  new PlainVanillaPayoff(Option.Type.Call, 100.0),\n  new EuropeanExercise(DateExt.UTC('7,June,2014'))\n)"
+		"cell3": {
+			"input": {
+				"type": "javascript",
+				"source": "today = DateExt.UTC('7,March,2014');\nSettings.evaluationDate.set(today);\ntoday;"
+			},
+			"show_editor": true,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot3\"><code>Fri Mar 07 2014 08:00:00 GMT+0800 (Hong Kong Standard Time)</code></div>"
+			}
 		},
-		"show_editor": true,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot6\"><code>[object Object]</code></div>"
-		}
-	},
-	"cell7": {
-		"input": {
-			"type": "markdown",
-			"source": "#### 估值算法: analytic Black-Scholes formula\n估值算法包装在估值引擎类中，由引擎处理市场数据。我们将假设无风险率和无波动。"
+		"cell5": {
+			"input": {
+				"type": "markdown",
+				"source": "##### 权证\n创建权证只需相关的合同信息，市场数据根据计算方法在之后加载"
+			},
+			"show_editor": false,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot5\"><h5 id=\"权证\">权证</h5>\n<p>创建权证只需相关的合同信息，市场数据根据计算方法在之后加载</p>\n</div>"
+			}
 		},
-		"show_editor": false,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot7\"><h4 id=\"估值算法-analytic-black-scholes-formula\">估值算法: analytic Black-Scholes formula</h4>\n<p>估值算法包装在估值引擎类中，由引擎处理市场数据。我们将假设无风险率和无波动。</p>\n</div>"
-		}
-	},
-	"cell8": {
-		"input": {
-			"type": "javascript",
-			"source": "u = new SimpleQuote(100.0)"
+		"cell6": {
+			"input": {
+				"type": "javascript",
+				"source": "option = new EuropeanOption(\n  new PlainVanillaPayoff(Option.Type.Call, 100.0),\n  new EuropeanExercise(DateExt.UTC('7,June,2014'))\n)"
+			},
+			"show_editor": true,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot6\"><code>[object Object]</code></div>"
+			}
 		},
-		"show_editor": true,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot8\"><code>[object Object]</code></div>"
-		}
-	},
-	"cell9": {
-		"input": {
-			"type": "javascript",
-			"source": "r = new SimpleQuote(0.01)"
+		"cell7": {
+			"input": {
+				"type": "markdown",
+				"source": "##### Black-Scholes\n估值算法包装在估值引擎类中，由引擎处理市场数据。我们将假设无风险率和无波动。"
+			},
+			"show_editor": false,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot7\"><h5 id=\"black-scholes\">Black-Scholes</h5>\n<p>估值算法包装在估值引擎类中，由引擎处理市场数据。我们将假设无风险率和无波动。</p>\n</div>"
+			}
 		},
-		"show_editor": true,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot9\"><code>[object Object]</code></div>"
-		}
-	},
-	"cell10": {
-		"input": {
-			"type": "javascript",
-			"source": "sigma = new SimpleQuote(0.2)"
+		"cell8": {
+			"input": {
+				"type": "javascript",
+				"source": "u = new SimpleQuote(100.0)"
+			},
+			"show_editor": true,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot8\"><code>[object Object]</code></div>"
+			}
 		},
-		"show_editor": true,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot10\"><code>[object Object]</code></div>"
-		}
-	},
-	"cell11": {
-		"input": {
-			"type": "markdown",
-			"source": "市场数据包装在process对象"
+		"cell9": {
+			"input": {
+				"type": "javascript",
+				"source": "r = new SimpleQuote(0.01)"
+			},
+			"show_editor": true,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot9\"><code>[object Object]</code></div>"
+			}
 		},
-		"show_editor": false,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot11\"><p>市场数据包装在process对象</p>\n</div>"
-		}
-	},
-	"cell12": {
-		"input": {
-			"type": "javascript",
-			"source": "riskFreeCurve = new FlatForward().ffInit3(0, new TARGET(), new Handle(r), new Actual360())"
+		"cell10": {
+			"input": {
+				"type": "javascript",
+				"source": "sigma = new SimpleQuote(0.2)"
+			},
+			"show_editor": true,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot10\"><code>[object Object]</code></div>"
+			}
 		},
-		"show_editor": true,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot12\"><code>[object Object]</code></div>"
-		}
-	},
-	"cell13": {
-		"input": {
-			"type": "javascript",
-			"source": "volatility = new BlackConstantVol().bcvInit4(0, new TARGET(), new Handle(sigma), new Actual360())"
+		"cell11": {
+			"input": {
+				"type": "markdown",
+				"source": "市场数据包装在process对象"
+			},
+			"show_editor": false,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot11\"><p>市场数据包装在process对象</p>\n</div>"
+			}
 		},
-		"show_editor": true,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot13\"><code>[object Object]</code></div>"
-		}
-	},
-	"cell14": {
-		"input": {
-			"type": "javascript",
-			"source": "process = new BlackScholesProcess(\n  new Handle(u),\n  new Handle(riskFreeCurve),\n  new Handle(volatility)\n)"
+		"cell12": {
+			"input": {
+				"type": "javascript",
+				"source": "riskFreeCurve = new FlatForward().ffInit3(0, new TARGET(), new Handle(r), new Actual360())"
+			},
+			"show_editor": true,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot12\"><code>[object Object]</code></div>"
+			}
 		},
-		"show_editor": true,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot14\"><code>[object Object]</code></div>"
-		}
-	},
-	"cell15": {
-		"input": {
-			"type": "markdown",
-			"source": "最后，用process创建估值引擎"
+		"cell13": {
+			"input": {
+				"type": "javascript",
+				"source": "volatility = new BlackConstantVol().bcvInit4(0, new TARGET(), new Handle(sigma), new Actual360())"
+			},
+			"show_editor": true,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot13\"><code>[object Object]</code></div>"
+			}
 		},
-		"show_editor": false,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot15\"><p>最后，用process创建估值引擎</p>\n</div>"
-		}
-	},
-	"cell16": {
-		"input": {
-			"type": "javascript",
-			"source": "engine = new AnalyticEuropeanEngine().init1(process)"
+		"cell14": {
+			"input": {
+				"type": "javascript",
+				"source": "process = new BlackScholesProcess(\n  new Handle(u),\n  new Handle(riskFreeCurve),\n  new Handle(volatility)\n)"
+			},
+			"show_editor": true,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot14\"><code>[object Object]</code></div>"
+			}
 		},
-		"show_editor": true,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot16\"><code>[object Object]</code></div>"
-		}
-	},
-	"cell17": {
-		"input": {
-			"type": "javascript",
-			"source": "option.setPricingEngine(engine)"
+		"cell15": {
+			"input": {
+				"type": "markdown",
+				"source": "最后，用process创建估值引擎"
+			},
+			"show_editor": false,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot15\"><p>最后，用process创建估值引擎</p>\n</div>"
+			}
 		},
-		"show_editor": true,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot17\"><code>undefined</code></div>"
-		}
-	},
-	"cell18": {
-		"input": {
-			"type": "javascript",
-			"source": "npv = option.NPV();\nnpv;"
+		"cell16": {
+			"input": {
+				"type": "javascript",
+				"source": "engine = new AnalyticEuropeanEngine().init1(process)"
+			},
+			"show_editor": true,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot16\"><code>[object Object]</code></div>"
+			}
 		},
-		"show_editor": true,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot18\"><code>4.155543462156206</code></div>"
-		}
-	},
-	"cell19": {
-		"input": {
-			"type": "markdown",
-			"source": "#### 市场数据变动\n当市场数据变动，权证会被通知重新计算"
+		"cell17": {
+			"input": {
+				"type": "javascript",
+				"source": "option.setPricingEngine(engine)"
+			},
+			"show_editor": true,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot17\"><code>undefined</code></div>"
+			}
 		},
-		"show_editor": false,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot19\"><h4 id=\"市场数据变动\">市场数据变动</h4>\n<p>当市场数据变动，权证会被通知重新计算</p>\n</div>"
-		}
-	},
-	"cell20": {
-		"input": {
-			"type": "javascript",
-			"source": "x = new Array(400), y = new Array(400);\n\nfor (var i = 0; i < 400; i++) {\n    x[i] = 80 + i / 10;\n    u.setValue(80 + i / 10);\n    y[i] = option.NPV();\n }\n\nline = {x: x, y: y, type: 'scatter'};\nlayout = {\n    title: '权证估值', showlegend: false\n};\ndata = [line];\n\nplot(data, layout);"
+		"cell18": {
+			"input": {
+				"type": "javascript",
+				"source": "npv = option.NPV();\nnpv;"
+			},
+			"show_editor": true,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot18\"><code>4.155543462156206</code></div>"
+			}
 		},
-		"show_editor": true,
-		"output": {
-			"type": "html",
-			"content": "<div id=\"ot20\" class=\"js-plotly-plot\"><div class=\"plot-container plotly\"><div class=\"svg-container\" style=\"position: relative; width: 100%; height: 450px;\"><svg class=\"main-svg\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"831.375\" height=\"450\" style=\"background: rgb(25, 29, 33);\"><defs id=\"defs-034af6\"><g class=\"clips\"><clipPath id=\"clip034af6xyplot\" class=\"plotclip\"><rect width=\"671\" height=\"270\"></rect></clipPath><clipPath class=\"axesclip\" id=\"clip034af6x\"><rect x=\"80\" y=\"0\" width=\"671\" height=\"450\"></rect></clipPath><clipPath class=\"axesclip\" id=\"clip034af6y\"><rect x=\"0\" y=\"100\" width=\"831.375\" height=\"270\"></rect></clipPath><clipPath class=\"axesclip\" id=\"clip034af6xy\"><rect x=\"80\" y=\"100\" width=\"671\" height=\"270\"></rect></clipPath></g><g class=\"gradients\"></g></defs><g class=\"bglayer\"></g><g class=\"draglayer cursor-crosshair\"><g class=\"xy\"><rect class=\"nsewdrag drag\" data-subplot=\"xy\" x=\"80\" y=\"100\" width=\"671\" height=\"270\" style=\"fill: transparent; stroke-width: 0; pointer-events: all;\"></rect><rect class=\"nwdrag drag cursor-nw-resize\" data-subplot=\"xy\" x=\"60\" y=\"80\" width=\"20\" height=\"20\" style=\"fill: transparent; stroke-width: 0; pointer-events: all;\"></rect><rect class=\"nedrag drag cursor-ne-resize\" data-subplot=\"xy\" x=\"751\" y=\"80\" width=\"20\" height=\"20\" style=\"fill: transparent; stroke-width: 0; pointer-events: all;\"></rect><rect class=\"swdrag drag cursor-sw-resize\" data-subplot=\"xy\" x=\"60\" y=\"370\" width=\"20\" height=\"20\" style=\"fill: transparent; stroke-width: 0; pointer-events: all;\"></rect><rect class=\"sedrag drag cursor-se-resize\" data-subplot=\"xy\" x=\"751\" y=\"370\" width=\"20\" height=\"20\" style=\"fill: transparent; stroke-width: 0; pointer-events: all;\"></rect><rect class=\"ewdrag drag cursor-ew-resize\" data-subplot=\"xy\" x=\"147.10000000000002\" y=\"370.5\" width=\"536.8000000000001\" height=\"20\" style=\"fill: transparent; stroke-width: 0; pointer-events: all;\"></rect><rect class=\"wdrag drag cursor-w-resize\" data-subplot=\"xy\" x=\"80\" y=\"370.5\" width=\"67.10000000000001\" height=\"20\" style=\"fill: transparent; stroke-width: 0; pointer-events: all;\"></rect><rect class=\"edrag drag cursor-e-resize\" data-subplot=\"xy\" x=\"683.9\" y=\"370.5\" width=\"67.10000000000001\" height=\"20\" style=\"fill: transparent; stroke-width: 0; pointer-events: all;\"></rect><rect class=\"nsdrag drag cursor-ns-resize\" data-subplot=\"xy\" x=\"59.5\" y=\"127\" width=\"20\" height=\"216\" style=\"fill: transparent; stroke-width: 0; pointer-events: all;\"></rect><rect class=\"sdrag drag cursor-s-resize\" data-subplot=\"xy\" x=\"59.5\" y=\"343\" width=\"20\" height=\"27\" style=\"fill: transparent; stroke-width: 0; pointer-events: all;\"></rect><rect class=\"ndrag drag cursor-n-resize\" data-subplot=\"xy\" x=\"59.5\" y=\"100\" width=\"20\" height=\"27\" style=\"fill: transparent; stroke-width: 0; pointer-events: all;\"></rect></g></g><g class=\"layer-below\"><g class=\"imagelayer\"></g><g class=\"shapelayer\"></g></g><g class=\"cartesianlayer\"><g class=\"subplot xy\"><g class=\"layer-subplot\"><g class=\"shapelayer\"></g><g class=\"imagelayer\"></g></g><g class=\"gridlayer\"><g class=\"x\"><path class=\"xgrid crisp\" transform=\"translate(164.09,0)\" d=\"M0,100v270\" style=\"stroke: rgb(29, 33, 36); stroke-opacity: 1; stroke-width: 1px;\"></path><path class=\"xgrid crisp\" transform=\"translate(248.17,0)\" d=\"M0,100v270\" style=\"stroke: rgb(29, 33, 36); stroke-opacity: 1; stroke-width: 1px;\"></path><path class=\"xgrid crisp\" transform=\"translate(332.26,0)\" d=\"M0,100v270\" style=\"stroke: rgb(29, 33, 36); stroke-opacity: 1; stroke-width: 1px;\"></path><path class=\"xgrid crisp\" transform=\"translate(416.34,0)\" d=\"M0,100v270\" style=\"stroke: rgb(29, 33, 36); stroke-opacity: 1; stroke-width: 1px;\"></path><path class=\"xgrid crisp\" transform=\"translate(500.43,0)\" d=\"M0,100v270\" style=\"stroke: rgb(29, 33, 36); stroke-opacity: 1; stroke-width: 1px;\"></path><path class=\"xgrid crisp\" transform=\"translate(584.51,0)\" d=\"M0,100v270\" style=\"stroke: rgb(29, 33, 36); stroke-opacity: 1; stroke-width: 1px;\"></path><path class=\"xgrid crisp\" transform=\"translate(668.6,0)\" d=\"M0,100v270\" style=\"stroke: rgb(29, 33, 36); stroke-opacity: 1; stroke-width: 1px;\"></path></g><g class=\"y\"><path class=\"ygrid crisp\" transform=\"translate(0,297.08000000000004)\" d=\"M80,0h671\" style=\"stroke: rgb(29, 33, 36); stroke-opacity: 1; stroke-width: 1px;\"></path><path class=\"ygrid crisp\" transform=\"translate(0,237.11)\" d=\"M80,0h671\" style=\"stroke: rgb(29, 33, 36); stroke-opacity: 1; stroke-width: 1px;\"></path><path class=\"ygrid crisp\" transform=\"translate(0,177.13)\" d=\"M80,0h671\" style=\"stroke: rgb(29, 33, 36); stroke-opacity: 1; stroke-width: 1px;\"></path><path class=\"ygrid crisp\" transform=\"translate(0,117.16)\" d=\"M80,0h671\" style=\"stroke: rgb(29, 33, 36); stroke-opacity: 1; stroke-width: 1px;\"></path></g></g><g class=\"zerolinelayer\"><path class=\"yzl zl crisp\" transform=\"translate(0,357.06)\" d=\"M80,0h671\" style=\"stroke: rgb(68, 68, 68); stroke-opacity: 1; stroke-width: 1px;\"></path></g><path class=\"xlines-below\"></path><path class=\"ylines-below\"></path><g class=\"overlines-below\"></g><g class=\"xaxislayer-below\"></g><g class=\"yaxislayer-below\"></g><g class=\"overaxes-below\"></g><g class=\"plot\" transform=\"translate(80, 100)\" clip-path=\"url('#clip034af6xyplot')\"><g class=\"scatterlayer mlayer\"><g class=\"trace scatter tracee623a0\" style=\"stroke-miterlimit: 2; opacity: 1;\"><g class=\"fills\"></g><g class=\"errorbars\"></g><g class=\"lines\"><path class=\"js-line\" d=\"M0,256.5L68.95,254.96L70.63,254.9L116.04,252.58L117.72,252.46L159.76,248.75L161.44,248.57L196.76,243.89L198.44,243.63L232.08,237.53L233.76,237.19L267.39,229.28L269.07,228.84L301.03,219.52L302.71,218.98L332.98,208.47L334.66,207.85L368.29,194.29L369.97,193.56L401.93,178.94L403.61,178.13L440.61,159.27L442.29,158.37L479.29,137.72L480.97,136.75L526.37,109.41L528.06,108.37L580.19,74.94L581.87,73.83L650.82,27.4L652.5,26.25L671,13.5\" style=\"vector-effect: non-scaling-stroke; fill: none; stroke: rgb(31, 119, 180); stroke-opacity: 1; stroke-width: 2px; opacity: 1;\"></path></g><g class=\"points\"></g><g class=\"text\"></g></g></g></g><g class=\"overplot\"></g><path class=\"xlines-above crisp\" d=\"M0,0\" style=\"fill: none;\"></path><path class=\"ylines-above crisp\" d=\"M0,0\" style=\"fill: none;\"></path><g class=\"overlines-above\"></g><g class=\"xaxislayer-above\"><g class=\"xtick\"><text text-anchor=\"middle\" x=\"0\" y=\"383\" data-unformatted=\"80\" data-math=\"N\" transform=\"translate(80,0)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">80</text></g><g class=\"xtick\"><text text-anchor=\"middle\" x=\"0\" y=\"383\" data-unformatted=\"85\" data-math=\"N\" transform=\"translate(164.09,0)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">85</text></g><g class=\"xtick\"><text text-anchor=\"middle\" x=\"0\" y=\"383\" data-unformatted=\"90\" data-math=\"N\" transform=\"translate(248.17,0)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">90</text></g><g class=\"xtick\"><text text-anchor=\"middle\" x=\"0\" y=\"383\" data-unformatted=\"95\" data-math=\"N\" transform=\"translate(332.26,0)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">95</text></g><g class=\"xtick\"><text text-anchor=\"middle\" x=\"0\" y=\"383\" data-unformatted=\"100\" data-math=\"N\" transform=\"translate(416.34,0)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">100</text></g><g class=\"xtick\"><text text-anchor=\"middle\" x=\"0\" y=\"383\" data-unformatted=\"105\" data-math=\"N\" transform=\"translate(500.43,0)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">105</text></g><g class=\"xtick\"><text text-anchor=\"middle\" x=\"0\" y=\"383\" data-unformatted=\"110\" data-math=\"N\" transform=\"translate(584.51,0)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">110</text></g><g class=\"xtick\"><text text-anchor=\"middle\" x=\"0\" y=\"383\" data-unformatted=\"115\" data-math=\"N\" transform=\"translate(668.6,0)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">115</text></g></g><g class=\"yaxislayer-above\"><g class=\"ytick\"><text text-anchor=\"end\" x=\"79\" y=\"4.199999999999999\" data-unformatted=\"0\" data-math=\"N\" transform=\"translate(0,357.06)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">0</text></g><g class=\"ytick\"><text text-anchor=\"end\" x=\"79\" y=\"4.199999999999999\" data-unformatted=\"5\" data-math=\"N\" transform=\"translate(0,297.08000000000004)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">5</text></g><g class=\"ytick\"><text text-anchor=\"end\" x=\"79\" y=\"4.199999999999999\" data-unformatted=\"10\" data-math=\"N\" transform=\"translate(0,237.11)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">10</text></g><g class=\"ytick\"><text text-anchor=\"end\" x=\"79\" y=\"4.199999999999999\" data-unformatted=\"15\" data-math=\"N\" transform=\"translate(0,177.13)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">15</text></g><g class=\"ytick\"><text text-anchor=\"end\" x=\"79\" y=\"4.199999999999999\" data-unformatted=\"20\" data-math=\"N\" transform=\"translate(0,117.16)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">20</text></g></g><g class=\"overaxes-above\"></g></g></g><g class=\"polarlayer\"></g><g class=\"ternarylayer\"></g><g class=\"geolayer\"></g><g class=\"funnelarealayer\"></g><g class=\"pielayer\"></g><g class=\"treemaplayer\"></g><g class=\"sunburstlayer\"></g><g class=\"glimages\"></g></svg><div class=\"gl-container\"></div><svg class=\"main-svg\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"831.375\" height=\"450\"><defs id=\"topdefs-034af6\"><g class=\"clips\"></g></defs><g class=\"indicatorlayer\"></g><g class=\"layer-above\"><g class=\"imagelayer\"></g><g class=\"shapelayer\"></g></g><g class=\"infolayer\"><g class=\"g-gtitle\"><text class=\"gtitle\" x=\"415.6875\" y=\"50\" text-anchor=\"middle\" dy=\"0em\" data-unformatted=\"权证估值\" data-math=\"N\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 17px; fill: rgb(68, 68, 68); opacity: 1; font-weight: normal; white-space: pre;\">权证估值</text></g><g class=\"g-xtitle\"></g><g class=\"g-ytitle\"></g></g><g class=\"menulayer\"></g><g class=\"zoomlayer\"></g></svg><div class=\"modebar-container\" style=\"position: absolute; top: 0px; right: 0px; width: 100%;\"><div id=\"modebar-034af6\" class=\"modebar modebar--hover ease-bg\"><div class=\"modebar-group\"><a rel=\"tooltip\" class=\"modebar-btn\" data-title=\"Download plot as a png\" data-toggle=\"false\" data-gravity=\"n\"><svg viewBox=\"0 0 1000 1000\" class=\"icon\" height=\"1em\" width=\"1em\"><path d=\"m500 450c-83 0-150-67-150-150 0-83 67-150 150-150 83 0 150 67 150 150 0 83-67 150-150 150z m400 150h-120c-16 0-34 13-39 29l-31 93c-6 15-23 28-40 28h-340c-16 0-34-13-39-28l-31-94c-6-15-23-28-40-28h-120c-55 0-100-45-100-100v-450c0-55 45-100 100-100h800c55 0 100 45 100 100v450c0 55-45 100-100 100z m-400-550c-138 0-250 112-250 250 0 138 112 250 250 250 138 0 250-112 250-250 0-138-112-250-250-250z m365 380c-19 0-35 16-35 35 0 19 16 35 35 35 19 0 35-16 35-35 0-19-16-35-35-35z\" transform=\"matrix(1 0 0 -1 0 850)\"></path></svg></a></div><div class=\"modebar-group\"><a rel=\"tooltip\" class=\"modebar-btn active\" data-title=\"Zoom\" data-attr=\"dragmode\" data-val=\"zoom\" data-toggle=\"false\" data-gravity=\"n\"><svg viewBox=\"0 0 1000 1000\" class=\"icon\" height=\"1em\" width=\"1em\"><path d=\"m1000-25l-250 251c40 63 63 138 63 218 0 224-182 406-407 406-224 0-406-182-406-406s183-406 407-406c80 0 155 22 218 62l250-250 125 125z m-812 250l0 438 437 0 0-438-437 0z m62 375l313 0 0-312-313 0 0 312z\" transform=\"matrix(1 0 0 -1 0 850)\"></path></svg></a><a rel=\"tooltip\" class=\"modebar-btn\" data-title=\"Pan\" data-attr=\"dragmode\" data-val=\"pan\" data-toggle=\"false\" data-gravity=\"n\"><svg viewBox=\"0 0 1000 1000\" class=\"icon\" height=\"1em\" width=\"1em\"><path d=\"m1000 350l-187 188 0-125-250 0 0 250 125 0-188 187-187-187 125 0 0-250-250 0 0 125-188-188 186-187 0 125 252 0 0-250-125 0 187-188 188 188-125 0 0 250 250 0 0-126 187 188z\" transform=\"matrix(1 0 0 -1 0 850)\"></path></svg></a></div><div class=\"modebar-group\"><a rel=\"tooltip\" class=\"modebar-btn\" data-title=\"Zoom in\" data-attr=\"zoom\" data-val=\"in\" data-toggle=\"false\" data-gravity=\"n\"><svg viewBox=\"0 0 875 1000\" class=\"icon\" height=\"1em\" width=\"1em\"><path d=\"m1 787l0-875 875 0 0 875-875 0z m687-500l-187 0 0-187-125 0 0 187-188 0 0 125 188 0 0 187 125 0 0-187 187 0 0-125z\" transform=\"matrix(1 0 0 -1 0 850)\"></path></svg></a><a rel=\"tooltip\" class=\"modebar-btn\" data-title=\"Zoom out\" data-attr=\"zoom\" data-val=\"out\" data-toggle=\"false\" data-gravity=\"n\"><svg viewBox=\"0 0 875 1000\" class=\"icon\" height=\"1em\" width=\"1em\"><path d=\"m0 788l0-876 875 0 0 876-875 0z m688-500l-500 0 0 125 500 0 0-125z\" transform=\"matrix(1 0 0 -1 0 850)\"></path></svg></a><a rel=\"tooltip\" class=\"modebar-btn\" data-title=\"Autoscale\" data-attr=\"zoom\" data-val=\"auto\" data-toggle=\"false\" data-gravity=\"n\"><svg viewBox=\"0 0 1000 1000\" class=\"icon\" height=\"1em\" width=\"1em\"><path d=\"m250 850l-187 0-63 0 0-62 0-188 63 0 0 188 187 0 0 62z m688 0l-188 0 0-62 188 0 0-188 62 0 0 188 0 62-62 0z m-875-938l0 188-63 0 0-188 0-62 63 0 187 0 0 62-187 0z m875 188l0-188-188 0 0-62 188 0 62 0 0 62 0 188-62 0z m-125 188l-1 0-93-94-156 156 156 156 92-93 2 0 0 250-250 0 0-2 93-92-156-156-156 156 94 92 0 2-250 0 0-250 0 0 93 93 157-156-157-156-93 94 0 0 0-250 250 0 0 0-94 93 156 157 156-157-93-93 0 0 250 0 0 250z\" transform=\"matrix(1 0 0 -1 0 850)\"></path></svg></a><a rel=\"tooltip\" class=\"modebar-btn\" data-title=\"Reset axes\" data-attr=\"zoom\" data-val=\"reset\" data-toggle=\"false\" data-gravity=\"n\"><svg viewBox=\"0 0 928.6 1000\" class=\"icon\" height=\"1em\" width=\"1em\"><path d=\"m786 296v-267q0-15-11-26t-25-10h-214v214h-143v-214h-214q-15 0-25 10t-11 26v267q0 1 0 2t0 2l321 264 321-264q1-1 1-4z m124 39l-34-41q-5-5-12-6h-2q-7 0-12 3l-386 322-386-322q-7-4-13-4-7 2-12 7l-35 41q-4 5-3 13t6 12l401 334q18 15 42 15t43-15l136-114v109q0 8 5 13t13 5h107q8 0 13-5t5-13v-227l122-102q5-5 6-12t-4-13z\" transform=\"matrix(1 0 0 -1 0 850)\"></path></svg></a></div><div class=\"modebar-group\"><a rel=\"tooltip\" class=\"modebar-btn\" data-title=\"Toggle Spike Lines\" data-attr=\"_cartesianSpikesEnabled\" data-val=\"on\" data-toggle=\"false\" data-gravity=\"n\"><svg viewBox=\"0 0 1000 1000\" class=\"icon\" height=\"1em\" width=\"1em\"><path d=\"M512 409c0-57-46-104-103-104-57 0-104 47-104 104 0 57 47 103 104 103 57 0 103-46 103-103z m-327-39l92 0 0 92-92 0z m-185 0l92 0 0 92-92 0z m370-186l92 0 0 93-92 0z m0-184l92 0 0 92-92 0z\" transform=\"matrix(1.5 0 0 -1.5 0 850)\"></path></svg></a><a rel=\"tooltip\" class=\"modebar-btn\" data-title=\"Show closest data on hover\" data-attr=\"hovermode\" data-val=\"closest\" data-toggle=\"false\" data-gravity=\"ne\"><svg viewBox=\"0 0 1500 1000\" class=\"icon\" height=\"1em\" width=\"1em\"><path d=\"m375 725l0 0-375-375 375-374 0-1 1125 0 0 750-1125 0z\" transform=\"matrix(1 0 0 -1 0 850)\"></path></svg></a><a rel=\"tooltip\" class=\"modebar-btn active\" data-title=\"Compare data on hover\" data-attr=\"hovermode\" data-val=\"x\" data-toggle=\"false\" data-gravity=\"ne\"><svg viewBox=\"0 0 1125 1000\" class=\"icon\" height=\"1em\" width=\"1em\"><path d=\"m187 786l0 2-187-188 188-187 0 0 937 0 0 373-938 0z m0-499l0 1-187-188 188-188 0 0 937 0 0 376-938-1z\" transform=\"matrix(1 0 0 -1 0 850)\"></path></svg></a></div></div></div><svg class=\"main-svg\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"831.375\" height=\"450\"><g class=\"hoverlayer\"></g></svg></div></div></div>"
+		"cell19": {
+			"input": {
+				"type": "markdown",
+				"source": "##### 市场数据变动\n当市场数据变动，权证会被通知重新计算"
+			},
+			"show_editor": false,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot19\"><h5 id=\"市场数据变动\">市场数据变动</h5>\n<p>当市场数据变动，权证会被通知重新计算</p>\n</div>"
+			}
+		},
+		"cell20": {
+			"input": {
+				"type": "javascript",
+				"source": "x = new Array(400), y = new Array(400);\n\nfor (var i = 0; i < 400; i++) {\n    x[i] = 80 + i / 10;\n    u.setValue(80 + i / 10);\n    y[i] = option.NPV();\n }\n\nline = {x: x, y: y, type: 'scatter'};\nlayout = {\n    title: '权证估值', showlegend: false\n};\ndata = [line];\n\nplot(data, layout);"
+			},
+			"show_editor": true,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot20\" class=\"js-plotly-plot\"><div class=\"plot-container plotly\"><div class=\"svg-container\" style=\"position: relative; width: 100%; height: 450px;\"><svg class=\"main-svg\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"831.375\" height=\"450\" style=\"background: rgb(25, 29, 33);\"><defs id=\"defs-034af6\"><g class=\"clips\"><clipPath id=\"clip034af6xyplot\" class=\"plotclip\"><rect width=\"671\" height=\"270\"></rect></clipPath><clipPath class=\"axesclip\" id=\"clip034af6x\"><rect x=\"80\" y=\"0\" width=\"671\" height=\"450\"></rect></clipPath><clipPath class=\"axesclip\" id=\"clip034af6y\"><rect x=\"0\" y=\"100\" width=\"831.375\" height=\"270\"></rect></clipPath><clipPath class=\"axesclip\" id=\"clip034af6xy\"><rect x=\"80\" y=\"100\" width=\"671\" height=\"270\"></rect></clipPath></g><g class=\"gradients\"></g></defs><g class=\"bglayer\"></g><g class=\"draglayer cursor-crosshair\"><g class=\"xy\"><rect class=\"nsewdrag drag\" data-subplot=\"xy\" x=\"80\" y=\"100\" width=\"671\" height=\"270\" style=\"fill: transparent; stroke-width: 0; pointer-events: all;\"></rect><rect class=\"nwdrag drag cursor-nw-resize\" data-subplot=\"xy\" x=\"60\" y=\"80\" width=\"20\" height=\"20\" style=\"fill: transparent; stroke-width: 0; pointer-events: all;\"></rect><rect class=\"nedrag drag cursor-ne-resize\" data-subplot=\"xy\" x=\"751\" y=\"80\" width=\"20\" height=\"20\" style=\"fill: transparent; stroke-width: 0; pointer-events: all;\"></rect><rect class=\"swdrag drag cursor-sw-resize\" data-subplot=\"xy\" x=\"60\" y=\"370\" width=\"20\" height=\"20\" style=\"fill: transparent; stroke-width: 0; pointer-events: all;\"></rect><rect class=\"sedrag drag cursor-se-resize\" data-subplot=\"xy\" x=\"751\" y=\"370\" width=\"20\" height=\"20\" style=\"fill: transparent; stroke-width: 0; pointer-events: all;\"></rect><rect class=\"ewdrag drag cursor-ew-resize\" data-subplot=\"xy\" x=\"147.10000000000002\" y=\"370.5\" width=\"536.8000000000001\" height=\"20\" style=\"fill: transparent; stroke-width: 0; pointer-events: all;\"></rect><rect class=\"wdrag drag cursor-w-resize\" data-subplot=\"xy\" x=\"80\" y=\"370.5\" width=\"67.10000000000001\" height=\"20\" style=\"fill: transparent; stroke-width: 0; pointer-events: all;\"></rect><rect class=\"edrag drag cursor-e-resize\" data-subplot=\"xy\" x=\"683.9\" y=\"370.5\" width=\"67.10000000000001\" height=\"20\" style=\"fill: transparent; stroke-width: 0; pointer-events: all;\"></rect><rect class=\"nsdrag drag cursor-ns-resize\" data-subplot=\"xy\" x=\"59.5\" y=\"127\" width=\"20\" height=\"216\" style=\"fill: transparent; stroke-width: 0; pointer-events: all;\"></rect><rect class=\"sdrag drag cursor-s-resize\" data-subplot=\"xy\" x=\"59.5\" y=\"343\" width=\"20\" height=\"27\" style=\"fill: transparent; stroke-width: 0; pointer-events: all;\"></rect><rect class=\"ndrag drag cursor-n-resize\" data-subplot=\"xy\" x=\"59.5\" y=\"100\" width=\"20\" height=\"27\" style=\"fill: transparent; stroke-width: 0; pointer-events: all;\"></rect></g></g><g class=\"layer-below\"><g class=\"imagelayer\"></g><g class=\"shapelayer\"></g></g><g class=\"cartesianlayer\"><g class=\"subplot xy\"><g class=\"layer-subplot\"><g class=\"shapelayer\"></g><g class=\"imagelayer\"></g></g><g class=\"gridlayer\"><g class=\"x\"><path class=\"xgrid crisp\" transform=\"translate(164.09,0)\" d=\"M0,100v270\" style=\"stroke: rgb(29, 33, 36); stroke-opacity: 1; stroke-width: 1px;\"></path><path class=\"xgrid crisp\" transform=\"translate(248.17,0)\" d=\"M0,100v270\" style=\"stroke: rgb(29, 33, 36); stroke-opacity: 1; stroke-width: 1px;\"></path><path class=\"xgrid crisp\" transform=\"translate(332.26,0)\" d=\"M0,100v270\" style=\"stroke: rgb(29, 33, 36); stroke-opacity: 1; stroke-width: 1px;\"></path><path class=\"xgrid crisp\" transform=\"translate(416.34,0)\" d=\"M0,100v270\" style=\"stroke: rgb(29, 33, 36); stroke-opacity: 1; stroke-width: 1px;\"></path><path class=\"xgrid crisp\" transform=\"translate(500.43,0)\" d=\"M0,100v270\" style=\"stroke: rgb(29, 33, 36); stroke-opacity: 1; stroke-width: 1px;\"></path><path class=\"xgrid crisp\" transform=\"translate(584.51,0)\" d=\"M0,100v270\" style=\"stroke: rgb(29, 33, 36); stroke-opacity: 1; stroke-width: 1px;\"></path><path class=\"xgrid crisp\" transform=\"translate(668.6,0)\" d=\"M0,100v270\" style=\"stroke: rgb(29, 33, 36); stroke-opacity: 1; stroke-width: 1px;\"></path></g><g class=\"y\"><path class=\"ygrid crisp\" transform=\"translate(0,297.08000000000004)\" d=\"M80,0h671\" style=\"stroke: rgb(29, 33, 36); stroke-opacity: 1; stroke-width: 1px;\"></path><path class=\"ygrid crisp\" transform=\"translate(0,237.11)\" d=\"M80,0h671\" style=\"stroke: rgb(29, 33, 36); stroke-opacity: 1; stroke-width: 1px;\"></path><path class=\"ygrid crisp\" transform=\"translate(0,177.13)\" d=\"M80,0h671\" style=\"stroke: rgb(29, 33, 36); stroke-opacity: 1; stroke-width: 1px;\"></path><path class=\"ygrid crisp\" transform=\"translate(0,117.16)\" d=\"M80,0h671\" style=\"stroke: rgb(29, 33, 36); stroke-opacity: 1; stroke-width: 1px;\"></path></g></g><g class=\"zerolinelayer\"><path class=\"yzl zl crisp\" transform=\"translate(0,357.06)\" d=\"M80,0h671\" style=\"stroke: rgb(68, 68, 68); stroke-opacity: 1; stroke-width: 1px;\"></path></g><path class=\"xlines-below\"></path><path class=\"ylines-below\"></path><g class=\"overlines-below\"></g><g class=\"xaxislayer-below\"></g><g class=\"yaxislayer-below\"></g><g class=\"overaxes-below\"></g><g class=\"plot\" transform=\"translate(80, 100)\" clip-path=\"url('#clip034af6xyplot')\"><g class=\"scatterlayer mlayer\"><g class=\"trace scatter tracee623a0\" style=\"stroke-miterlimit: 2; opacity: 1;\"><g class=\"fills\"></g><g class=\"errorbars\"></g><g class=\"lines\"><path class=\"js-line\" d=\"M0,256.5L68.95,254.96L70.63,254.9L116.04,252.58L117.72,252.46L159.76,248.75L161.44,248.57L196.76,243.89L198.44,243.63L232.08,237.53L233.76,237.19L267.39,229.28L269.07,228.84L301.03,219.52L302.71,218.98L332.98,208.47L334.66,207.85L368.29,194.29L369.97,193.56L401.93,178.94L403.61,178.13L440.61,159.27L442.29,158.37L479.29,137.72L480.97,136.75L526.37,109.41L528.06,108.37L580.19,74.94L581.87,73.83L650.82,27.4L652.5,26.25L671,13.5\" style=\"vector-effect: non-scaling-stroke; fill: none; stroke: rgb(31, 119, 180); stroke-opacity: 1; stroke-width: 2px; opacity: 1;\"></path></g><g class=\"points\"></g><g class=\"text\"></g></g></g></g><g class=\"overplot\"></g><path class=\"xlines-above crisp\" d=\"M0,0\" style=\"fill: none;\"></path><path class=\"ylines-above crisp\" d=\"M0,0\" style=\"fill: none;\"></path><g class=\"overlines-above\"></g><g class=\"xaxislayer-above\"><g class=\"xtick\"><text text-anchor=\"middle\" x=\"0\" y=\"383\" data-unformatted=\"80\" data-math=\"N\" transform=\"translate(80,0)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">80</text></g><g class=\"xtick\"><text text-anchor=\"middle\" x=\"0\" y=\"383\" data-unformatted=\"85\" data-math=\"N\" transform=\"translate(164.09,0)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">85</text></g><g class=\"xtick\"><text text-anchor=\"middle\" x=\"0\" y=\"383\" data-unformatted=\"90\" data-math=\"N\" transform=\"translate(248.17,0)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">90</text></g><g class=\"xtick\"><text text-anchor=\"middle\" x=\"0\" y=\"383\" data-unformatted=\"95\" data-math=\"N\" transform=\"translate(332.26,0)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">95</text></g><g class=\"xtick\"><text text-anchor=\"middle\" x=\"0\" y=\"383\" data-unformatted=\"100\" data-math=\"N\" transform=\"translate(416.34,0)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">100</text></g><g class=\"xtick\"><text text-anchor=\"middle\" x=\"0\" y=\"383\" data-unformatted=\"105\" data-math=\"N\" transform=\"translate(500.43,0)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">105</text></g><g class=\"xtick\"><text text-anchor=\"middle\" x=\"0\" y=\"383\" data-unformatted=\"110\" data-math=\"N\" transform=\"translate(584.51,0)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">110</text></g><g class=\"xtick\"><text text-anchor=\"middle\" x=\"0\" y=\"383\" data-unformatted=\"115\" data-math=\"N\" transform=\"translate(668.6,0)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">115</text></g></g><g class=\"yaxislayer-above\"><g class=\"ytick\"><text text-anchor=\"end\" x=\"79\" y=\"4.199999999999999\" data-unformatted=\"0\" data-math=\"N\" transform=\"translate(0,357.06)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">0</text></g><g class=\"ytick\"><text text-anchor=\"end\" x=\"79\" y=\"4.199999999999999\" data-unformatted=\"5\" data-math=\"N\" transform=\"translate(0,297.08000000000004)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">5</text></g><g class=\"ytick\"><text text-anchor=\"end\" x=\"79\" y=\"4.199999999999999\" data-unformatted=\"10\" data-math=\"N\" transform=\"translate(0,237.11)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">10</text></g><g class=\"ytick\"><text text-anchor=\"end\" x=\"79\" y=\"4.199999999999999\" data-unformatted=\"15\" data-math=\"N\" transform=\"translate(0,177.13)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">15</text></g><g class=\"ytick\"><text text-anchor=\"end\" x=\"79\" y=\"4.199999999999999\" data-unformatted=\"20\" data-math=\"N\" transform=\"translate(0,117.16)\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 12px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;\">20</text></g></g><g class=\"overaxes-above\"></g></g></g><g class=\"polarlayer\"></g><g class=\"ternarylayer\"></g><g class=\"geolayer\"></g><g class=\"funnelarealayer\"></g><g class=\"pielayer\"></g><g class=\"treemaplayer\"></g><g class=\"sunburstlayer\"></g><g class=\"glimages\"></g></svg><div class=\"gl-container\"></div><svg class=\"main-svg\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"831.375\" height=\"450\"><defs id=\"topdefs-034af6\"><g class=\"clips\"></g></defs><g class=\"indicatorlayer\"></g><g class=\"layer-above\"><g class=\"imagelayer\"></g><g class=\"shapelayer\"></g></g><g class=\"infolayer\"><g class=\"g-gtitle\"><text class=\"gtitle\" x=\"415.6875\" y=\"50\" text-anchor=\"middle\" dy=\"0em\" data-unformatted=\"权证估值\" data-math=\"N\" style=\"font-family: &quot;Open Sans&quot;, verdana, arial, sans-serif; font-size: 17px; fill: rgb(68, 68, 68); opacity: 1; font-weight: normal; white-space: pre;\">权证估值</text></g><g class=\"g-xtitle\"></g><g class=\"g-ytitle\"></g></g><g class=\"menulayer\"></g><g class=\"zoomlayer\"></g></svg><div class=\"modebar-container\" style=\"position: absolute; top: 0px; right: 0px; width: 100%;\"><div id=\"modebar-034af6\" class=\"modebar modebar--hover ease-bg\"><div class=\"modebar-group\"><a rel=\"tooltip\" class=\"modebar-btn\" data-title=\"Download plot as a png\" data-toggle=\"false\" data-gravity=\"n\"><svg viewBox=\"0 0 1000 1000\" class=\"icon\" height=\"1em\" width=\"1em\"><path d=\"m500 450c-83 0-150-67-150-150 0-83 67-150 150-150 83 0 150 67 150 150 0 83-67 150-150 150z m400 150h-120c-16 0-34 13-39 29l-31 93c-6 15-23 28-40 28h-340c-16 0-34-13-39-28l-31-94c-6-15-23-28-40-28h-120c-55 0-100-45-100-100v-450c0-55 45-100 100-100h800c55 0 100 45 100 100v450c0 55-45 100-100 100z m-400-550c-138 0-250 112-250 250 0 138 112 250 250 250 138 0 250-112 250-250 0-138-112-250-250-250z m365 380c-19 0-35 16-35 35 0 19 16 35 35 35 19 0 35-16 35-35 0-19-16-35-35-35z\" transform=\"matrix(1 0 0 -1 0 850)\"></path></svg></a></div><div class=\"modebar-group\"><a rel=\"tooltip\" class=\"modebar-btn active\" data-title=\"Zoom\" data-attr=\"dragmode\" data-val=\"zoom\" data-toggle=\"false\" data-gravity=\"n\"><svg viewBox=\"0 0 1000 1000\" class=\"icon\" height=\"1em\" width=\"1em\"><path d=\"m1000-25l-250 251c40 63 63 138 63 218 0 224-182 406-407 406-224 0-406-182-406-406s183-406 407-406c80 0 155 22 218 62l250-250 125 125z m-812 250l0 438 437 0 0-438-437 0z m62 375l313 0 0-312-313 0 0 312z\" transform=\"matrix(1 0 0 -1 0 850)\"></path></svg></a><a rel=\"tooltip\" class=\"modebar-btn\" data-title=\"Pan\" data-attr=\"dragmode\" data-val=\"pan\" data-toggle=\"false\" data-gravity=\"n\"><svg viewBox=\"0 0 1000 1000\" class=\"icon\" height=\"1em\" width=\"1em\"><path d=\"m1000 350l-187 188 0-125-250 0 0 250 125 0-188 187-187-187 125 0 0-250-250 0 0 125-188-188 186-187 0 125 252 0 0-250-125 0 187-188 188 188-125 0 0 250 250 0 0-126 187 188z\" transform=\"matrix(1 0 0 -1 0 850)\"></path></svg></a></div><div class=\"modebar-group\"><a rel=\"tooltip\" class=\"modebar-btn\" data-title=\"Zoom in\" data-attr=\"zoom\" data-val=\"in\" data-toggle=\"false\" data-gravity=\"n\"><svg viewBox=\"0 0 875 1000\" class=\"icon\" height=\"1em\" width=\"1em\"><path d=\"m1 787l0-875 875 0 0 875-875 0z m687-500l-187 0 0-187-125 0 0 187-188 0 0 125 188 0 0 187 125 0 0-187 187 0 0-125z\" transform=\"matrix(1 0 0 -1 0 850)\"></path></svg></a><a rel=\"tooltip\" class=\"modebar-btn\" data-title=\"Zoom out\" data-attr=\"zoom\" data-val=\"out\" data-toggle=\"false\" data-gravity=\"n\"><svg viewBox=\"0 0 875 1000\" class=\"icon\" height=\"1em\" width=\"1em\"><path d=\"m0 788l0-876 875 0 0 876-875 0z m688-500l-500 0 0 125 500 0 0-125z\" transform=\"matrix(1 0 0 -1 0 850)\"></path></svg></a><a rel=\"tooltip\" class=\"modebar-btn\" data-title=\"Autoscale\" data-attr=\"zoom\" data-val=\"auto\" data-toggle=\"false\" data-gravity=\"n\"><svg viewBox=\"0 0 1000 1000\" class=\"icon\" height=\"1em\" width=\"1em\"><path d=\"m250 850l-187 0-63 0 0-62 0-188 63 0 0 188 187 0 0 62z m688 0l-188 0 0-62 188 0 0-188 62 0 0 188 0 62-62 0z m-875-938l0 188-63 0 0-188 0-62 63 0 187 0 0 62-187 0z m875 188l0-188-188 0 0-62 188 0 62 0 0 62 0 188-62 0z m-125 188l-1 0-93-94-156 156 156 156 92-93 2 0 0 250-250 0 0-2 93-92-156-156-156 156 94 92 0 2-250 0 0-250 0 0 93 93 157-156-157-156-93 94 0 0 0-250 250 0 0 0-94 93 156 157 156-157-93-93 0 0 250 0 0 250z\" transform=\"matrix(1 0 0 -1 0 850)\"></path></svg></a><a rel=\"tooltip\" class=\"modebar-btn\" data-title=\"Reset axes\" data-attr=\"zoom\" data-val=\"reset\" data-toggle=\"false\" data-gravity=\"n\"><svg viewBox=\"0 0 928.6 1000\" class=\"icon\" height=\"1em\" width=\"1em\"><path d=\"m786 296v-267q0-15-11-26t-25-10h-214v214h-143v-214h-214q-15 0-25 10t-11 26v267q0 1 0 2t0 2l321 264 321-264q1-1 1-4z m124 39l-34-41q-5-5-12-6h-2q-7 0-12 3l-386 322-386-322q-7-4-13-4-7 2-12 7l-35 41q-4 5-3 13t6 12l401 334q18 15 42 15t43-15l136-114v109q0 8 5 13t13 5h107q8 0 13-5t5-13v-227l122-102q5-5 6-12t-4-13z\" transform=\"matrix(1 0 0 -1 0 850)\"></path></svg></a></div><div class=\"modebar-group\"><a rel=\"tooltip\" class=\"modebar-btn\" data-title=\"Toggle Spike Lines\" data-attr=\"_cartesianSpikesEnabled\" data-val=\"on\" data-toggle=\"false\" data-gravity=\"n\"><svg viewBox=\"0 0 1000 1000\" class=\"icon\" height=\"1em\" width=\"1em\"><path d=\"M512 409c0-57-46-104-103-104-57 0-104 47-104 104 0 57 47 103 104 103 57 0 103-46 103-103z m-327-39l92 0 0 92-92 0z m-185 0l92 0 0 92-92 0z m370-186l92 0 0 93-92 0z m0-184l92 0 0 92-92 0z\" transform=\"matrix(1.5 0 0 -1.5 0 850)\"></path></svg></a><a rel=\"tooltip\" class=\"modebar-btn\" data-title=\"Show closest data on hover\" data-attr=\"hovermode\" data-val=\"closest\" data-toggle=\"false\" data-gravity=\"ne\"><svg viewBox=\"0 0 1500 1000\" class=\"icon\" height=\"1em\" width=\"1em\"><path d=\"m375 725l0 0-375-375 375-374 0-1 1125 0 0 750-1125 0z\" transform=\"matrix(1 0 0 -1 0 850)\"></path></svg></a><a rel=\"tooltip\" class=\"modebar-btn active\" data-title=\"Compare data on hover\" data-attr=\"hovermode\" data-val=\"x\" data-toggle=\"false\" data-gravity=\"ne\"><svg viewBox=\"0 0 1125 1000\" class=\"icon\" height=\"1em\" width=\"1em\"><path d=\"m187 786l0 2-187-188 188-187 0 0 937 0 0 373-938 0z m0-499l0 1-187-188 188-188 0 0 937 0 0 376-938-1z\" transform=\"matrix(1 0 0 -1 0 850)\"></path></svg></a></div></div></div><svg class=\"main-svg\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"831.375\" height=\"450\"><g class=\"hoverlayer\"></g></svg></div></div></div>"
+			}
 		}
 	}
 }
