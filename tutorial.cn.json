@@ -24,23 +24,23 @@
 	"cell22": {
 		"input": {
 			"type": "markdown",
-			"source": "##### Cell级操作(鼠标选中时):\n\n* 点击 </> or <i class=\"fa fa-sticky-note-o\"></i> 切换Cell类型, 可以是 `code` 或 `markdown`\n* 点击 <i class=\"fa fa-navicon\"></i> or <i class=\"fa fa-ellipsis-v\"></i> 显示/隐藏 编辑器\n* 点击 <i class=\"fa fa-play\"></i> 执行当前Cell\n* 点击 <i class=\"fa fa-angle-up\"></i> 向上移动当前Cell\n* 点击 <i class=\"fa fa-trash-o\"></i> 删除当前cell\n* 点击 <i class=\"fa fa-angle-down\"></i> 向下移动当前Cell"
+			"source": "##### Cell级操作(鼠标选中时):\n\n* 点击 <i class=\"fa fa-code\"></i> or <i class=\"fa fa-sticky-note-o\"></i> 切换Cell类型, 可以是 `code` 或 `markdown`\n* 点击 <i class=\"fa fa-navicon\"></i> or <i class=\"fa fa-ellipsis-v\"></i> 显示/隐藏 编辑器\n* 点击 <i class=\"fa fa-play\"></i> 执行当前Cell\n* 点击 <i class=\"fa fa-angle-up\"></i> 向上移动当前Cell\n* 点击 <i class=\"fa fa-trash-o\"></i> 删除当前cell\n* 点击 <i class=\"fa fa-angle-down\"></i> 向下移动当前Cell"
 		},
 		"show_editor": false,
 		"output": {
 			"type": "html",
-			"content": "<div id=\"ot22\"><h5 id=\"cell级操作鼠标选中时\">Cell级操作(鼠标选中时):</h5>\n<ul>\n<li>点击 &lt;/&gt; or <i class=\"fa fa-sticky-note-o\"></i> 切换Cell类型, 可以是 <code>code</code> 或 <code>markdown</code></li>\n<li>点击 <i class=\"fa fa-navicon\"></i> or <i class=\"fa fa-ellipsis-v\"></i> 显示/隐藏 编辑器</li>\n<li>点击 <i class=\"fa fa-play\"></i> 执行当前Cell</li>\n<li>点击 <i class=\"fa fa-angle-up\"></i> 向上移动当前Cell</li>\n<li>点击 <i class=\"fa fa-trash-o\"></i> 删除当前cell</li>\n<li>点击 <i class=\"fa fa-angle-down\"></i> 向下移动当前Cell</li>\n</ul>\n</div>"
+			"content": "<div id=\"ot22\"><h5 id=\"cell级操作鼠标选中时\">Cell级操作(鼠标选中时):</h5>\n<ul>\n<li>点击 <i class=\"fa fa-code\"></i> or <i class=\"fa fa-sticky-note-o\"></i> 切换Cell类型, 可以是 <code>code</code> 或 <code>markdown</code></li>\n<li>点击 <i class=\"fa fa-navicon\"></i> or <i class=\"fa fa-ellipsis-v\"></i> 显示/隐藏 编辑器</li>\n<li>点击 <i class=\"fa fa-play\"></i> 执行当前Cell</li>\n<li>点击 <i class=\"fa fa-angle-up\"></i> 向上移动当前Cell</li>\n<li>点击 <i class=\"fa fa-trash-o\"></i> 删除当前cell</li>\n<li>点击 <i class=\"fa fa-angle-down\"></i> 向下移动当前Cell</li>\n</ul>\n</div>"
 		}
 	},
 	"cell27": {
 		"input": {
 			"type": "markdown",
-			"source": "##### 设置\n\n* 点击 <i class=\"fa fa-adjust\"></i> 切换明暗主题色\n* 点击 <i class=\"fa fa-toggle-on\"></i> 或 <i class=\"fa fa-toggle-off\"></i>切换引擎, 默认是`eval5`. 请参照 `代码执行`部分\n\n文件:\n* 点击 <i class=\"fa fa-download\"></i>从当前notebook生产json文件，下载到本地磁盘\n* 用文件名输入框更改文件名\n* 点击 <i class=\"fa fa-upload\"></i> 从本地磁盘，上传notebook json文件到浏览器\n* 拖拽文件到此页面也可上传notebook json文件到浏览器"
+			"source": "##### 设置\n\n* 点击 <i class=\"fa fa-inbox\"></i> 或 <i class=\"fa fa-fire\"></i>切换引擎, 默认是`eval5`. 请参照 `代码执行`部分\n* 点击 <i class=\"fa fa-adjust\"></i> 切换明暗主题色\n* 点击 <i class=\"fa fa-toggle-on\"></i> 或 <i class=\"fa fa-toggle-off\"></i>切换`下一个`Cell功能，如果启用，执行一个Cell后，下一个Cell回选中\n\n文件:\n* 点击 <i class=\"fa fa-download\"></i>从当前notebook生产json文件，下载到本地磁盘\n* 用文件名输入框更改文件名\n* 点击 <i class=\"fa fa-upload\"></i> 从本地磁盘，上传notebook json文件到浏览器\n* 拖拽文件到此页面也可上传notebook json文件到浏览器"
 		},
 		"show_editor": false,
 		"output": {
 			"type": "html",
-			"content": "<div id=\"ot27\"><h5 id=\"设置\">设置</h5>\n<ul>\n<li>点击 <i class=\"fa fa-adjust\"></i> 切换明暗主题色</li>\n<li>点击 <i class=\"fa fa-toggle-on\"></i> 或 <i class=\"fa fa-toggle-off\"></i>切换引擎, 默认是<code>eval5</code>. 请参照 <code>代码执行</code>部分</li>\n</ul>\n<p>文件:</p>\n<ul>\n<li>点击 <i class=\"fa fa-download\"></i>从当前notebook生产json文件，下载到本地磁盘</li>\n<li>用文件名输入框更改文件名</li>\n<li>点击 <i class=\"fa fa-upload\"></i> 从本地磁盘，上传notebook json文件到浏览器</li>\n<li>拖拽文件到此页面也可上传notebook json文件到浏览器</li>\n</ul>\n</div>"
+			"content": "<div id=\"ot27\"><h5 id=\"设置\">设置</h5>\n<ul>\n<li>点击 <i class=\"fa fa-inbox\"></i> 或 <i class=\"fa fa-fire\"></i>切换引擎, 默认是<code>eval5</code>. 请参照 <code>代码执行</code>部分</li>\n<li>点击 <i class=\"fa fa-adjust\"></i> 切换明暗主题色</li>\n<li>点击 <i class=\"fa fa-toggle-on\"></i> 或 <i class=\"fa fa-toggle-off\"></i>切换<code>下一个</code>Cell功能，如果启用，执行一个Cell后，下一个Cell回选中</li>\n</ul>\n<p>文件:</p>\n<ul>\n<li>点击 <i class=\"fa fa-download\"></i>从当前notebook生产json文件，下载到本地磁盘</li>\n<li>用文件名输入框更改文件名</li>\n<li>点击 <i class=\"fa fa-upload\"></i> 从本地磁盘，上传notebook json文件到浏览器</li>\n<li>拖拽文件到此页面也可上传notebook json文件到浏览器</li>\n</ul>\n</div>"
 		}
 	},
 	"cell23": {
@@ -79,12 +79,12 @@
 	"cell26": {
 		"input": {
 			"type": "markdown",
-			"source": "##### 代码执行\n\n代码先由`typescript`编译为`ES5` javascript，再由根据引擎执行代码：\n\n* <i class=\"fa fa-toggle-on\"></i> [eval5](https://github.com/bplok20010/eval5)(js实现的js解释器), 在单独的`context`里解释执行\n* <i class=\"fa fa-toggle-off\"></i> `eval is evil`, 但有时使用js解释器太慢, 比如Monte Carlo Simulation. 使用`eval`可以加速。 比例如 [Discrete Hedging](#quantlib/discretehedging.json), 可以用两个引擎计算，比较执行时间\n\n**Warning**: 使用`eval`有很大安全隐患, 只有在绝对必要时才使用"
+			"source": "##### 代码执行\n\n代码在`iframe sandbox`执行，先由`typescript`编译为`ES5` javascript，再由根据引擎执行代码：\n\n* <i class=\"fa fa-inbox\"></i> [eval5](https://github.com/bplok20010/eval5)(js实现的js解释器), 在单独的`context`里解释执行\n* <i class=\"fa fa-fire\"></i> `eval is evil`, 但有时使用js解释器太慢, 比如Monte Carlo Simulation. 使用`eval`可以加速。 比例如 [Discrete Hedging](#quantlib/discretehedging.json), 可以用两个引擎计算，比较执行时间\n\n**Warning**: 使用`eval`有很大安全隐患, 只有在绝对必要时才使用"
 		},
 		"show_editor": false,
 		"output": {
 			"type": "html",
-			"content": "<div id=\"ot26\"><h5 id=\"代码执行\">代码执行</h5>\n<p>代码先由<code>typescript</code>编译为<code>ES5</code> javascript，再由根据引擎执行代码：</p>\n<ul>\n<li><i class=\"fa fa-toggle-on\"></i> <a target=\"_blank\" href=\"https://github.com/bplok20010/eval5\">eval5</a>(js实现的js解释器), 在单独的<code>context</code>里解释执行</li>\n<li><i class=\"fa fa-toggle-off\"></i> <code>eval is evil</code>, 但有时使用js解释器太慢, 比如Monte Carlo Simulation. 使用<code>eval</code>可以加速。 比例如 <a target=\"_blank\" href=\"#quantlib/discretehedging.json\">Discrete Hedging</a>, 可以用两个引擎计算，比较执行时间</li>\n</ul>\n<p><strong>Warning</strong>: 使用<code>eval</code>有很大安全隐患, 只有在绝对必要时才使用</p>\n</div>"
+			"content": "<div id=\"ot26\"><h5 id=\"代码执行\">代码执行</h5>\n<p>代码在<code>iframe sandbox</code>执行，先由<code>typescript</code>编译为<code>ES5</code> javascript，再由根据引擎执行代码：</p>\n<ul>\n<li><i class=\"fa fa-inbox\"></i> <a target=\"_blank\" href=\"https://github.com/bplok20010/eval5\">eval5</a>(js实现的js解释器), 在单独的<code>context</code>里解释执行</li>\n<li><i class=\"fa fa-fire\"></i> <code>eval is evil</code>, 但有时使用js解释器太慢, 比如Monte Carlo Simulation. 使用<code>eval</code>可以加速。 比例如 <a target=\"_blank\" href=\"#quantlib/discretehedging.json\">Discrete Hedging</a>, 可以用两个引擎计算，比较执行时间</li>\n</ul>\n<p><strong>Warning</strong>: 使用<code>eval</code>有很大安全隐患, 只有在绝对必要时才使用</p>\n</div>"
 		}
 	},
 	"cell29": {
