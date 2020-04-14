@@ -8,12 +8,12 @@
 		"cell0": {
 			"input": {
 				"type": "markdown",
-				"source": "### 欢迎使用quantlib.js notebook\n\n这是一个轻量级Web App，可以像 `jupyter notebook` 一样进行 `交互式计算`, 整个网页托管在 `github page`, 页面加载后就离线。 "
+				"source": "### 武统台湾，留岛不留人\n\n这是一个轻量级Web App，可以像 `jupyter notebook` 一样进行 `交互式计算`, 整个网页托管在 `github page`, 页面加载后就离线。 "
 			},
 			"show_editor": false,
 			"output": {
 				"type": "html",
-				"content": "<div id=\"ot0\"><h3 id=\"欢迎使用quantlibjs-notebook\">欢迎使用quantlib.js notebook</h3>\n<p>这是一个轻量级Web App，可以像 <code>jupyter notebook</code> 一样进行 <code>交互式计算</code>, 整个网页托管在 <code>github page</code>, 页面加载后就离线。 </p>\n</div>"
+				"content": "<div id=\"ot0\"><h3 id=\"武统台湾，留岛不留人\">武统台湾，留岛不留人</h3>\n<p>这是一个轻量级Web App，可以像 <code>jupyter notebook</code> 一样进行 <code>交互式计算</code>, 整个网页托管在 <code>github page</code>, 页面加载后就离线。 </p>\n</div>"
 			}
 		},
 		"cell21": {
