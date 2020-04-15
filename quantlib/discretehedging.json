@@ -2,7 +2,8 @@
 	"setting": {
 		"interpreter": "evil",
 		"typescript": true,
-		"locked": false
+		"locked": false,
+		"toc": true
 	},
 	"notebook": {
 		"cell3": {

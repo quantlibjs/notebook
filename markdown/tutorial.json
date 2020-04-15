@@ -2,7 +2,8 @@
 	"setting": {
 		"interpreter": "eval5",
 		"typescript": false,
-		"locked": true
+		"locked": true,
+		"toc": true
 	},
 	"notebook": {
 		"cell0": {
