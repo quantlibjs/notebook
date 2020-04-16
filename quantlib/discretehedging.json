@@ -3,7 +3,8 @@
 		"interpreter": "evil",
 		"typescript": true,
 		"locked": false,
-		"toc": true
+		"toc": true,
+		"color": "dark"
 	},
 	"notebook": {
 		"cell3": {

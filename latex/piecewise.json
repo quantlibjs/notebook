@@ -3,7 +3,8 @@
 		"interpreter": "eval5",
 		"typescript": false,
 		"locked": false,
-		"toc": true
+		"toc": true,
+		"color": "dark"
 	},
 	"notebook": {
 		"cell0": {
