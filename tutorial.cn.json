@@ -98,12 +98,12 @@
 		"cell26": {
 			"input": {
 				"type": "markdown",
-				"source": "##### 代码执行\n\n代码使用一下引擎，在`iframe sandbox`执行：\n\n* [eval5](https://github.com/bplok20010/eval5)(js实现的js解释器), 在单独的`context`里解释执行\n* `eval is evil`, 但有时使用js解释器太慢, 比如Monte Carlo Simulation. 使用`eval`可以加速。 比例如 [Discrete Hedging](#quantlib/discretehedging.json), 可以用两个引擎计算，比较执行时间\n\n**Warning**: 使用`eval`有安全隐患, 只有在绝对必要时才使用"
+				"source": "##### 代码执行\n\n代码根据`设置`的引擎解释执行：\n\n* [eval5](https://github.com/bplok20010/eval5)(js实现的js解释器), 在单独的`context`里解释执行\n* `eval is evil`, 但有时使用js解释器太慢, 比如Monte Carlo Simulation. 使用`eval`可以加速。 比例如 [Discrete Hedging](#quantlib/discretehedging.json), 可以用两个引擎计算，比较执行时间\n\n**Warning**: 使用`eval`有安全隐患, 只有在绝对必要时才使用"
 			},
 			"show_editor": false,
 			"output": {
 				"type": "html",
-				"content": "<div id=\"ot26\"><h5 id=\"代码执行\">代码执行</h5>\n<p>代码使用一下引擎，在<code>iframe sandbox</code>执行：</p>\n<ul>\n<li><a target=\"_blank\" href=\"https://github.com/bplok20010/eval5\">eval5</a>(js实现的js解释器), 在单独的<code>context</code>里解释执行</li>\n<li><code>eval is evil</code>, 但有时使用js解释器太慢, 比如Monte Carlo Simulation. 使用<code>eval</code>可以加速。 比例如 <a target=\"_blank\" href=\"#quantlib/discretehedging.json\">Discrete Hedging</a>, 可以用两个引擎计算，比较执行时间</li>\n</ul>\n<p><strong>Warning</strong>: 使用<code>eval</code>有安全隐患, 只有在绝对必要时才使用</p>\n</div>"
+				"content": "<div id=\"ot26\"><h5 id=\"代码执行\">代码执行</h5>\n<p>代码根据<code>设置</code>的引擎解释执行：</p>\n<ul>\n<li><a target=\"_blank\" href=\"https://github.com/bplok20010/eval5\">eval5</a>(js实现的js解释器), 在单独的<code>context</code>里解释执行</li>\n<li><code>eval is evil</code>, 但有时使用js解释器太慢, 比如Monte Carlo Simulation. 使用<code>eval</code>可以加速。 比例如 <a target=\"_blank\" href=\"#quantlib/discretehedging.json\">Discrete Hedging</a>, 可以用两个引擎计算，比较执行时间</li>\n</ul>\n<p><strong>Warning</strong>: 使用<code>eval</code>有安全隐患, 只有在绝对必要时才使用</p>\n</div>"
 			}
 		},
 		"cell29": {
