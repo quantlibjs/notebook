@@ -54,12 +54,12 @@
 		"cell27": {
 			"input": {
 				"type": "markdown",
-				"source": "##### Settings\n\nClick <i class=\"fa fa-bars\"></i> from navbar to show more settings:\n\n* toggle `Tri-state` checkbox to use `Next Cell` function, default is <i class=\"fa fa-minus-square-o\"></i>\n  * <i class=\"fa fa-minus-square-o\"></i> : after running a cell, select next cell\n  * <i class=\"fa fa-check-square-o\"></i> : after running a cell, select next cell and try to scroll it to top\n  * <i class=\"fa fa-square-o\"></i>: after running a cell, do not select or move to next cell\n* flip <i class=\"fa fa-toggle-on\"></i> or <i class=\"fa fa-toggle-off\"></i> to toggle use of sandbox, default is on. See [Code execution](#code-execution) below\n* flip <i class=\"fa fa-toggle-on\"></i> or <i class=\"fa fa-toggle-off\"></i> to toggle use of `typescript`, default is off. See [JavaScript vs TypeScript](#javascript-vs-typescript) below"
+				"source": "##### Settings\n\nClick <i class=\"fa fa-bars\"></i> from navbar to show more settings, flip <i class=\"fa fa-toggle-on\"></i> or <i class=\"fa fa-toggle-off\"></i> to:\n\n* toggle use of sandbox, default is on. See [Code execution](#code-execution) below\n* toggle use of `typescript`, default is off. See [JavaScript vs TypeScript](#javascript-vs-typescript) below\n* toggle scroll to next cell function"
 			},
 			"show_editor": false,
 			"output": {
 				"type": "html",
-				"content": "<div id=\"ot27\"><h5 id=\"settings\">Settings</h5>\n<p>Click <i class=\"fa fa-bars\"></i> from navbar to show more settings:</p>\n<ul>\n<li>toggle <code>Tri-state</code> checkbox to use <code>Next Cell</code> function, default is <i class=\"fa fa-minus-square-o\"></i><ul>\n<li><i class=\"fa fa-minus-square-o\"></i> : after running a cell, select next cell</li>\n<li><i class=\"fa fa-check-square-o\"></i> : after running a cell, select next cell and try to scroll it to top</li>\n<li><i class=\"fa fa-square-o\"></i>: after running a cell, do not select or move to next cell</li>\n</ul>\n</li>\n<li>flip <i class=\"fa fa-toggle-on\"></i> or <i class=\"fa fa-toggle-off\"></i> to toggle use of sandbox, default is on. See <a class=\"internal-link\" href=\"#code-execution\">Code execution</a> below</li>\n<li>flip <i class=\"fa fa-toggle-on\"></i> or <i class=\"fa fa-toggle-off\"></i> to toggle use of <code>typescript</code>, default is off. See <a class=\"internal-link\" href=\"#javascript-vs-typescript\">JavaScript vs TypeScript</a> below</li>\n</ul>\n</div>"
+				"content": "<div id=\"ot27\"><h5 id=\"settings\">Settings</h5>\n<p>Click <i class=\"fa fa-bars\"></i> from navbar to show more settings, flip <i class=\"fa fa-toggle-on\"></i> or <i class=\"fa fa-toggle-off\"></i> to:</p>\n<ul>\n<li>toggle use of sandbox, default is on. See <a class=\"internal-link\" href=\"#code-execution\">Code execution</a> below</li>\n<li>toggle use of <code>typescript</code>, default is off. See <a class=\"internal-link\" href=\"#javascript-vs-typescript\">JavaScript vs TypeScript</a> below</li>\n<li>toggle scroll to next cell function</li>\n</ul>\n</div>"
 			}
 		},
 		"cell32": {
@@ -131,12 +131,12 @@
 		"cell36": {
 			"input": {
 				"type": "markdown",
-				"source": "##### Help API\n\ntype `help(class, type?, name?)` to pull API document and render in output, \n\nparameters:\n\n * `class`\n   exact class name, cannot be empty\n * `type`\n   * `\"property\"` or `\"method\"`\n   * default is empty\n     if type is empty, `help` will get comment for class\n * `name`\n   * `property` or `method` name, no need to add trailing number\n   * default is empty\n     if `name` is empty, display all `property` or `method`\n\nexample:"
+				"source": "##### Help API\n\ntype `help(class, type?, name?)` to pull API document and render in output\n\n**warning** some browsers are not able use this feature, e.g. Safari on iOS device\n\nparameters:\n\n * `class`\n   * exact class name, cannot be empty\n * `type`\n   * `\"property\"` or `\"method\"`\n   * default is empty\n     if type is empty, `help` will get comment for class\n * `name`\n   * `property` or `method` name, no need to add trailing number\n   * default is empty\n     if `name` is empty, display all `property` or `method`\n\nExample:"
 			},
 			"show_editor": false,
 			"output": {
 				"type": "html",
-				"content": "<div id=\"ot36\"><h5 id=\"help-api\">Help API</h5>\n<p>type <code>help(class, type?, name?)</code> to pull API document and render in output, </p>\n<p>parameters:</p>\n<ul>\n<li><code>class</code>\nexact class name, cannot be empty</li>\n<li><code>type</code><ul>\n<li><code>\"property\"</code> or <code>\"method\"</code></li>\n<li>default is empty\nif type is empty, <code>help</code> will get comment for class</li>\n</ul>\n</li>\n<li><code>name</code><ul>\n<li><code>property</code> or <code>method</code> name, no need to add trailing number</li>\n<li>default is empty\nif <code>name</code> is empty, display all <code>property</code> or <code>method</code></li>\n</ul>\n</li>\n</ul>\n<p>example:</p>\n</div>"
+				"content": "<div id=\"ot36\"><h5 id=\"help-api\">Help API</h5>\n<p>type <code>help(class, type?, name?)</code> to pull API document and render in output</p>\n<p><strong>warning</strong> some browsers are not able use this feature, e.g. Safari on iOS device</p>\n<p>parameters:</p>\n<ul>\n<li><code>class</code><ul>\n<li>exact class name, cannot be empty</li>\n</ul>\n</li>\n<li><code>type</code><ul>\n<li><code>\"property\"</code> or <code>\"method\"</code></li>\n<li>default is empty\nif type is empty, <code>help</code> will get comment for class</li>\n</ul>\n</li>\n<li><code>name</code><ul>\n<li><code>property</code> or <code>method</code> name, no need to add trailing number</li>\n<li>default is empty\nif <code>name</code> is empty, display all <code>property</code> or <code>method</code></li>\n</ul>\n</li>\n</ul>\n<p>Example:</p>\n</div>"
 			}
 		},
 		"cell37": {
