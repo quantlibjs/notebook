@@ -25,7 +25,64 @@
     <style>.CodeMirror{height:auto}.cell.row{border-color:#191d21;border-width:.5px;border-style:solid;padding:2px;margin:2px;border-radius:.5em}body{position:relative}.input{padding-top:2px}.running{padding-right:2px}#toc{top:56px;left:20px}nav[data-toggle=toc] .nav>li>a{display:block;padding:4px 20px;font-size:16px;font-weight:500;color:#767676}nav[data-toggle=toc] .nav>li>a:focus,nav[data-toggle=toc] .nav>li>a:hover{padding-left:19px;color:#563d7c;text-decoration:none;background-color:transparent;border-left:1px solid #563d7c}nav[data-toggle=toc] .nav-link.active,nav[data-toggle=toc] .nav-link.active:focus,nav[data-toggle=toc] .nav-link.active:hover{padding-left:18px;font-weight:700;color:#563d7c;background-color:transparent;border-left:2px solid #563d7c}nav[data-toggle=toc] .nav-link+ul{display:none;padding-bottom:10px}nav[data-toggle=toc] .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:14px;font-weight:400}nav[data-toggle=toc] .nav .nav>li>a:focus,nav[data-toggle=toc] .nav .nav>li>a:hover{padding-left:29px}nav[data-toggle=toc] .nav .nav>li>.active,nav[data-toggle=toc] .nav .nav>li>.active:focus,nav[data-toggle=toc] .nav .nav>li>.active:hover{padding-left:28px;font-weight:500}nav[data-toggle=toc] .nav-link.active+ul{display:block}blockquote{border-left:4px solid #ddd;padding:0 15px;color:#777}.json-document{padding:1em 2em}ol.json-array,ul.json-dict{list-style-type:none;margin:0 0 0 1px;padding-left:2em}.json-string{color:#0b7500}.json-literal{color:#1a01cc;font-weight:700}a.json-toggle{position:relative;color:inherit;text-decoration:none}a.json-toggle:focus{outline:0}a.json-toggle:before{font-size:1.1em;color:silver;content:"\25BC";position:absolute;display:inline-block;width:1em;text-align:center;line-height:1em;left:-1.2em}a.json-toggle:hover:before{color:#aaa}a.json-toggle.collapsed:before{transform:rotate(-90deg)}a.json-placeholder{color:#aaa;padding:0 2px;text-decoration:none}a.json-placeholder:hover{text-decoration:underline}.tsd-signatures{list-style-type:none}.tsd-descriptions{list-style-type:none}aside ul{list-style-type:none}</style>
   </head>
   <body class="bootstrap-dark" data-spy="scroll" data-target="#toc" data-offset="56">
-    <nav class="navbar navbar-themed"><div class=container-fluid><a class="d-none d-xl-block navbar-brand"href=/notebook>quantlib.js</a> <button class=navbar-toggler type=button data-target=#navbarSupportedContent data-toggle=collapse><span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse"id=navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation"><form><div class=row><div class="form-group col-sm-2"></div><div class="form-group col-sm-10"><div class="custom-control custom-switch"><input id=switchnext type=checkbox class=custom-control-input><label class=custom-control-label for=switchnext>Scroll To Next Cell</label></div></div></div><div class=row><div class="form-group col-sm-2"></div><div class="form-group d-none d-xl-block col-sm-8"><input id=filename type=search class=form-control placeholder=武统台湾.json></div><div class="form-group col-sm-2 d-none d-xl-block"><button class=btn type=button onclick='$("#file-input").click()'><i class="fa fa-upload"></i></button> <button class=btn type=button onclick='saveAs($("#filename").val(),toJSON())'><i class="fa fa-download"></i></button></div></div><div class=row><div class="form-group col-sm-2"></div><div class="form-group col-sm-10"><ul class=navbar-nav><li class=nav-item><a class=nav-link href=/notebook/#tutorial.json target=_blank>Tutorial <i class="fa fa-external-link"></i></a><li class="d-none d-xl-block nav-item"><a class=nav-link href=/docs target=_blank>API Docs <i class="fa fa-external-link"></i></a><li class="d-none d-xl-block nav-item"><a class=nav-link href=/test-suite target=_blank>Test Suite <i class="fa fa-external-link"></i></a></ul></div></div></form></div></div></nav><div class=container-fluid><div class="row no-gutters"id=root><div class="col-xl-2 hidden-lg-down"id=tocroot><nav class=sticky-top data-toggle=toc id=toc></nav></div><div class="col-lg-12 col-xl-12"id=nbroot><div class=container-fluid id=notebook></div></div></div></div><input id=file-input type=file style=display:none>
+    <nav class="navbar navbar-themed">
+      <div class="container-fluid">
+        <a class="navbar-brand d-none d-xl-block" href="/notebook">quantlib.js</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <form>
+            <div class="row">
+              <div class="form-group col-sm-2"></div>
+              <div class="form-group col-sm-10">
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="switchnext">
+                  <label class="custom-control-label" for="switchnext">Scroll To Next Cell</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-sm-2"></div>
+              <div class="form-group col-sm-8 d-none d-xl-block">
+                <input class="form-control" id="filename" type="search" placeholder="武统台湾.json">
+              </div>
+              <div class="form-group col-sm-2 d-none d-xl-block">
+                <button class="btn" type="button" onclick="$('#file-input').click();"><i class="fa fa-upload"></i></button>
+                <button class="btn" type="button" onclick="saveAs($('#filename').val(),toJSON());"><i class="fa fa-download"></i></button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-sm-2"></div>
+              <div class="form-group col-sm-10">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="/notebook/#tutorial.json">Tutorial <i class="fa fa-external-link"></i></a>
+                  </li>
+                  <li class="nav-item d-none d-xl-block">
+                    <a class="nav-link" target="_blank" href="/docs">API Docs <i class="fa fa-external-link"></i></a>
+                  </li>
+                  <li class="nav-item d-none d-xl-block">
+                    <a class="nav-link" target="_blank" href="/test-suite">Test Suite <i class="fa fa-external-link"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row no-gutters" id="root">
+        <div id="tocroot" class="col-xl-2 hidden-lg-down">
+          <nav id="toc" class="sticky-top" data-toggle="toc"></nav>
+        </div>
+        <div id="nbroot" class="col-lg-12 col-xl-12">
+          <div id="notebook" class="container-fluid"></div>
+        </div>
+      </div>
+    </div>
+    <input type="file" id="file-input" style="display: none;">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@forevolve/bootstrap-dark@1.0.0-alpha.981/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/codemirror@5.53.0/lib/codemirror.js"></script>
