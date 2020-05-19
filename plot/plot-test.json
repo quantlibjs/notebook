@@ -1,7 +1,5 @@
 {
 	"setting": {
-		"interpreter": "eval5",
-		"typescript": false,
 		"locked": false,
 		"toc": false,
 		"color": "dark"

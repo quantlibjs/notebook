@@ -1,7 +1,5 @@
 {
 	"setting": {
-		"interpreter": "evil",
-		"typescript": true,
 		"locked": false,
 		"toc": true,
 		"color": "dark"
@@ -37,7 +35,29 @@
 			"show_editor": true,
 			"output": {
 				"type": "html",
-				"content": "<div id=\"ot16\"><code></code></div>"
+				"content": "<div id=\"ot16\">[]</div>"
+			}
+		},
+		"cell17": {
+			"input": {
+				"type": "javascript",
+				"source": "require('quantlib')"
+			},
+			"show_editor": true,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot17\"><code>undefined</code></div>"
+			}
+		},
+		"cell18": {
+			"input": {
+				"type": "javascript",
+				"source": "require('typescript')"
+			},
+			"show_editor": true,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot18\"><code>undefined</code></div>"
 			}
 		},
 		"cell4": {
@@ -114,7 +134,7 @@
 			"show_editor": true,
 			"output": {
 				"type": "html",
-				"content": "<div id=\"ot2\"><code>Option value: 2.512067086039888<br></code><table class=\"table table-striped\"><thead><tr><th>samples</th><th>trades</th><th>PLMean</th><th>PLStDev</th><th>DermanKamal</th><th>PLSkew</th><th>PLKurt</th></tr></thead><tbody><tr><td>50000</td><td>21</td><td>-0.000</td><td>0.43</td><td>0.44</td><td>-0.30</td><td>1.42</td></tr><tr><td>50000</td><td>84</td><td>-0.001</td><td>0.22</td><td>0.22</td><td>-0.18</td><td>1.66</td></tr></tbody></table><code>Run completed in 50.938 seconds<br></code></div>"
+				"content": "<div id=\"ot2\"><code>Option value: 2.512067086039888<br></code><table class=\"table table-striped\"><thead><tr><th>samples</th><th>trades</th><th>PLMean</th><th>PLStDev</th><th>DermanKamal</th><th>PLSkew</th><th>PLKurt</th></tr></thead><tbody><tr><td>50000</td><td>21</td><td>0.001</td><td>0.43</td><td>0.44</td><td>-0.34</td><td>1.66</td></tr><tr><td>50000</td><td>84</td><td>-0.002</td><td>0.22</td><td>0.22</td><td>-0.17</td><td>1.61</td></tr></tbody></table><code>Run completed in 11.629 seconds<br></code></div>"
 			}
 		}
 	}
