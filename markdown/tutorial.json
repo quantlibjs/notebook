@@ -10,7 +10,7 @@
 				"type": "markdown",
 				"source": "# Markdown syntax guide\n\nHere’s an overview of Markdown syntax that you can use anywhere on GitHub.com or in your own text files."
 			},
-			"show_editor": false,
+			"editor": false,
 			"output": {
 				"type": "html",
 				"content": "<div id=\"ot0\"><h1 id=\"markdown-syntax-guide\">Markdown syntax guide</h1>\n<p>Here’s an overview of Markdown syntax that you can use anywhere on GitHub.com or in your own text files.</p>\n</div>"
@@ -21,7 +21,7 @@
 				"type": "markdown",
 				"source": "## Headers"
 			},
-			"show_editor": false,
+			"editor": false,
 			"output": {
 				"type": "html",
 				"content": "<div id=\"ot1\"><h2 id=\"headers\">Headers</h2>\n</div>"
@@ -32,7 +32,7 @@
 				"type": "markdown",
 				"source": "# This is an <h1> tag\n## This is an <h2> tag\n###### This is an <h6> tag"
 			},
-			"show_editor": true,
+			"editor": true,
 			"output": {
 				"type": "html",
 				"content": ""
@@ -43,7 +43,7 @@
 				"type": "markdown",
 				"source": "## Emphasis"
 			},
-			"show_editor": false,
+			"editor": false,
 			"output": {
 				"type": "html",
 				"content": "<div id=\"ot3\"><h2 id=\"emphasis\">Emphasis</h2>\n</div>"
@@ -54,7 +54,7 @@
 				"type": "markdown",
 				"source": "*This text will be italic*\n_This will also be italic_\n\n**This text will be bold**\n__This will also be bold__\n\n_You **can** combine them_"
 			},
-			"show_editor": true,
+			"editor": true,
 			"output": {
 				"type": "html",
 				"content": ""
@@ -65,7 +65,7 @@
 				"type": "markdown",
 				"source": "## Lists"
 			},
-			"show_editor": false,
+			"editor": false,
 			"output": {
 				"type": "html",
 				"content": "<div id=\"ot5\"><h2 id=\"lists\">Lists</h2>\n</div>"
@@ -76,7 +76,7 @@
 				"type": "markdown",
 				"source": "### Unordered"
 			},
-			"show_editor": false,
+			"editor": false,
 			"output": {
 				"type": "html",
 				"content": "<div id=\"ot6\"><h3 id=\"unordered\">Unordered</h3>\n</div>"
@@ -87,7 +87,7 @@
 				"type": "markdown",
 				"source": "* Item 1\n* Item 2\n  * Item 2a\n  * Item 2b"
 			},
-			"show_editor": true,
+			"editor": true,
 			"output": {
 				"type": "html",
 				"content": ""
@@ -98,7 +98,7 @@
 				"type": "markdown",
 				"source": "### Ordered"
 			},
-			"show_editor": false,
+			"editor": false,
 			"output": {
 				"type": "html",
 				"content": "<div id=\"ot8\"><h3 id=\"ordered\">Ordered</h3>\n</div>"
@@ -109,7 +109,7 @@
 				"type": "javascript",
 				"source": "1. Item 1\n1. Item 2\n1. Item 3\n   1. Item 3a\n   1. Item 3b"
 			},
-			"show_editor": true,
+			"editor": true,
 			"output": {
 				"type": "html",
 				"content": ""
@@ -120,7 +120,7 @@
 				"type": "markdown",
 				"source": "## Images"
 			},
-			"show_editor": false,
+			"editor": false,
 			"output": {
 				"type": "html",
 				"content": "<div id=\"ot10\"><h2 id=\"images\">Images</h2>\n</div>"
@@ -131,7 +131,7 @@
 				"type": "markdown",
 				"source": "![GitHub Logo](/images/logo.png)\nFormat: ![Alt Text](url)"
 			},
-			"show_editor": true,
+			"editor": true,
 			"output": {
 				"type": "html",
 				"content": ""
@@ -142,7 +142,7 @@
 				"type": "markdown",
 				"source": "## Links"
 			},
-			"show_editor": false,
+			"editor": false,
 			"output": {
 				"type": "html",
 				"content": "<div id=\"ot12\"><h2 id=\"links\">Links</h2>\n</div>"
@@ -153,7 +153,7 @@
 				"type": "markdown",
 				"source": "http://github.com - automatic!\n[GitHub](http://github.com)"
 			},
-			"show_editor": true,
+			"editor": true,
 			"output": {
 				"type": "html",
 				"content": ""
@@ -164,7 +164,7 @@
 				"type": "markdown",
 				"source": "## Blockquotes"
 			},
-			"show_editor": false,
+			"editor": false,
 			"output": {
 				"type": "html",
 				"content": "<div id=\"ot14\"><h2 id=\"blockquotes\">Blockquotes</h2>\n</div>"
@@ -175,7 +175,7 @@
 				"type": "markdown",
 				"source": "As Kanye West said:\n\n> We're living the future so\n> the present is our past."
 			},
-			"show_editor": true,
+			"editor": true,
 			"output": {
 				"type": "html",
 				"content": ""
@@ -186,7 +186,7 @@
 				"type": "markdown",
 				"source": "## Inline code"
 			},
-			"show_editor": false,
+			"editor": false,
 			"output": {
 				"type": "html",
 				"content": "<div id=\"ot16\"><h2 id=\"inline-code\">Inline code</h2>\n</div>"
@@ -197,7 +197,7 @@
 				"type": "markdown",
 				"source": "I think you should use an\n`<addr>` element here instead."
 			},
-			"show_editor": true,
+			"editor": true,
 			"output": {
 				"type": "html",
 				"content": ""
@@ -208,7 +208,7 @@
 				"type": "markdown",
 				"source": "## Syntax highlighting\n\nThis part is **different** from other notebook app, we only expect `javascript` in `code` cell, which uses `code mirror` text editor's syntax highlighting. There's no other syntaxt highlighting, which means don't use `code block` in markdown, it doesn't render well"
 			},
-			"show_editor": false,
+			"editor": false,
 			"output": {
 				"type": "html",
 				"content": "<div id=\"ot18\"><h2 id=\"syntax-highlighting\">Syntax highlighting</h2>\n<p>This part is <strong>different</strong> from other notebook app, we only expect <code>javascript</code> in <code>code</code> cell, which uses <code>code mirror</code> text editor's syntax highlighting. There's no other syntaxt highlighting, which means don't use <code>code block</code> in markdown, it doesn't render well</p>\n</div>"
@@ -219,7 +219,7 @@
 				"type": "markdown",
 				"source": "## Task Lists"
 			},
-			"show_editor": false,
+			"editor": false,
 			"output": {
 				"type": "html",
 				"content": "<div id=\"ot19\"><h2 id=\"task-lists\">Task Lists</h2>\n</div>"
@@ -230,7 +230,7 @@
 				"type": "markdown",
 				"source": "- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported\n- [x] list syntax required (any unordered or ordered list supported)\n- [x] this is a complete item\n- [ ] this is an incomplete item"
 			},
-			"show_editor": true,
+			"editor": true,
 			"output": {
 				"type": "html",
 				"content": ""
@@ -241,7 +241,7 @@
 				"type": "markdown",
 				"source": "## Tables\n\nThis is working in progress, table markdown has conflict with bootstrap, right now markdown table has no border, and alignment doesn't work as expected"
 			},
-			"show_editor": false,
+			"editor": false,
 			"output": {
 				"type": "html",
 				"content": "<div id=\"ot22\"><h2 id=\"tables\">Tables</h2>\n<p>This is working in progress, table markdown has conflict with bootstrap, right now markdown table has no border, and alignment doesn't work as expected</p>\n</div>"
@@ -252,7 +252,7 @@
 				"type": "markdown",
 				"source": "## Automatic linking for URLs\n\nAny URL (like http://www.github.com/) will be automatically converted into a clickable link."
 			},
-			"show_editor": false,
+			"editor": false,
 			"output": {
 				"type": "html",
 				"content": "<div id=\"ot23\"><h2 id=\"automatic-linking-for-urls\">Automatic linking for URLs</h2>\n<p>Any URL (like <a target=\"_blank\" href=\"http://www.github.com/\">http://www.github.com/</a>) will be automatically converted into a clickable link.</p>\n</div>"
@@ -263,7 +263,7 @@
 				"type": "markdown",
 				"source": "## Strikethrough\n\nAny word wrapped with two tildes (like ~~this~~) will appear crossed out."
 			},
-			"show_editor": false,
+			"editor": false,
 			"output": {
 				"type": "html",
 				"content": "<div id=\"ot21\"><h2 id=\"strikethrough\">Strikethrough</h2>\n<p>Any word wrapped with two tildes (like <del>this</del>) will appear crossed out.</p>\n</div>"
