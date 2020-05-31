@@ -1,4 +1,9 @@
 {
+	"meta": {
+		"title": "Katex Matrices",
+		"subtitle": "katex matrices tutorial",
+		"author": "quantlib.js"
+	},
 	"setting": {
 		"locked": false,
 		"toc": true,

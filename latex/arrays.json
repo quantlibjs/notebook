@@ -1,4 +1,9 @@
 {
+	"meta": {
+		"title": "Katex Arrays",
+		"subtitle": "katex arrays tutorial",
+		"author": "quantlib.js"
+	},
 	"setting": {
 		"locked": false,
 		"toc": true,

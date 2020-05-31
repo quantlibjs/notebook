@@ -1,4 +1,9 @@
 {
+	"meta": {
+		"title": "Markdown Tutorial",
+		"subtitle": "tuorial for markdown with marked.js",
+		"author": "quantlib.js"
+	},
 	"setting": {
 		"locked": true,
 		"toc": true,

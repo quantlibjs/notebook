@@ -1,4 +1,9 @@
 {
+	"meta": {
+		"title": "Katex Tutorial",
+		"subtitle": "katex tutorial",
+		"author": "quantlib.js"
+	},
 	"setting": {
 		"locked": false,
 		"toc": true,

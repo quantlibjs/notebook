@@ -1,4 +1,9 @@
 {
+	"meta": {
+		"title": "Discrete Hedging",
+		"subtitle": "from quantlib discrete hedging example",
+		"author": "quantlib.js"
+	},
 	"setting": {
 		"locked": false,
 		"toc": true,

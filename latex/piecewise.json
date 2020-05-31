@@ -1,4 +1,9 @@
 {
+	"meta": {
+		"title": "Katex Piecewise",
+		"subtitle": "katex piecewise tutorial",
+		"author": "quantlib.js"
+	},
 	"setting": {
 		"locked": false,
 		"toc": true,

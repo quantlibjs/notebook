@@ -1,4 +1,9 @@
 {
+	"meta": {
+		"title": "Katex Cancel",
+		"subtitle": "katex cancel tutorial",
+		"author": "quantlib.js"
+	},
 	"setting": {
 		"locked": false,
 		"toc": true,

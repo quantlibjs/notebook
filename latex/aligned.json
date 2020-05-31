@@ -1,4 +1,9 @@
 {
+	"meta": {
+		"title": "Katex Aligned",
+		"subtitle": "katex aligned tutorial",
+		"author": "quantlib.js"
+	},
 	"setting": {
 		"locked": false,
 		"toc": true,
