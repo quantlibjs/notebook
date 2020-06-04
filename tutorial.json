@@ -98,6 +98,17 @@
 				"content": "<div id=\"ot25\"><h5 id=\"latex-protection\">LaTex protection</h5>\n<p>LaTeX content may contain text that could be interpreted as Markdown, e.g., <code>$ {a}_{1} {a}_{2} $</code></p>\n<p>Those are protected and rendered as LaTeX <span><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><msub><mi>a</mi><mn>2</mn></msub></mrow><annotation encoding=\"application/x-tex\"> {a}_{1} {a}_{2} </annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height: 0.58056em; vertical-align: -0.15em;\"></span><span class=\"mord\"><span class=\"mord\"><span class=\"mord mathdefault\">a</span></span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.301108em;\"><span class=\"\" style=\"top: -2.55em; margin-right: 0.05em;\"><span class=\"pstrut\" style=\"height: 2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\"><span class=\"mord mtight\">1</span></span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.15em;\"><span class=\"\"></span></span></span></span></span></span><span class=\"mord\"><span class=\"mord\"><span class=\"mord mathdefault\">a</span></span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.301108em;\"><span class=\"\" style=\"top: -2.55em; margin-right: 0.05em;\"><span class=\"pstrut\" style=\"height: 2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\"><span class=\"mord mtight\">2</span></span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height: 0.15em;\"><span class=\"\"></span></span></span></span></span></span></span></span></span></span> instead of Markdown {a}<em>{1} {a}</em>{2}</p>\n</div>"
 			}
 		},
+		"cell47": {
+			"input": {
+				"type": "markdown",
+				"source": "##### Table of content\n\nif you group your markdown cells with level of headers, `h1`, `h2`, etc, and setting <i class=\"fa fa-columns\"></i> is on, you'll see table of contents of left side of window, which can track scrolling and display accordingly.\n\nClick link in table of content will navigate to that part of notebook"
+			},
+			"editor": false,
+			"output": {
+				"type": "html",
+				"content": "<div id=\"ot47\"><h5 id=\"table-of-content\">Table of content</h5>\n<p>if you group your markdown cells with level of headers, <code>h1</code>, <code>h2</code>, etc, and setting <i class=\"fa fa-columns\"></i> is on, you'll see table of contents of left side of window, which can track scrolling and display accordingly.</p>\n<p>Click link in table of content will navigate to that part of notebook</p>\n</div>"
+			}
+		},
 		"cell24": {
 			"input": {
 				"type": "markdown",
