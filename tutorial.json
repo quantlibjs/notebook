@@ -1,8 +1,8 @@
 {
 	"meta": {
-		"title": "#BlackLivesMatter",
-		"subtitle": "白宫一入深似海，从此节操是路人",
-		"author": "川普"
+		"title": "tutorial",
+		"subtitle": "tutorial for quantlib.js",
+		"author": "quantlib.js"
 	},
 	"setting": {
 		"locked": false,
